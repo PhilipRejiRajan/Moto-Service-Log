@@ -94,6 +94,8 @@ Partial Class form_Login
         Me.Controls.Add(Me.txtbox_uname)
         Me.Controls.Add(Me.lbl_pword)
         Me.Controls.Add(Me.lbl_uname)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "form_Login"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
