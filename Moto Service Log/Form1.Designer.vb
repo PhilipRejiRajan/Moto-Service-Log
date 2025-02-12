@@ -61,6 +61,7 @@ Partial Class form_Login
         Me.txtbox_pword.Location = New System.Drawing.Point(374, 216)
         Me.txtbox_pword.Multiline = True
         Me.txtbox_pword.Name = "txtbox_pword"
+        Me.txtbox_pword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtbox_pword.Size = New System.Drawing.Size(262, 41)
         Me.txtbox_pword.TabIndex = 3
         '
