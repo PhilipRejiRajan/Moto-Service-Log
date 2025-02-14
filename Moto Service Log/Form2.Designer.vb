@@ -1120,6 +1120,7 @@ Partial Class form_dashboard
         Me.ClientSize = New System.Drawing.Size(1898, 1024)
         Me.Controls.Add(Me.tabcontrol_dashboard)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.KeyPreview = True
         Me.Name = "form_dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MSL Dashboard"
