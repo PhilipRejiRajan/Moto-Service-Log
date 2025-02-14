@@ -201,6 +201,8 @@ Partial Class form_dashboard
         '
         'dgv_regtab
         '
+        Me.dgv_regtab.AllowUserToAddRows = False
+        Me.dgv_regtab.AllowUserToDeleteRows = False
         Me.dgv_regtab.AllowUserToResizeColumns = False
         Me.dgv_regtab.AllowUserToResizeRows = False
         Me.dgv_regtab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
