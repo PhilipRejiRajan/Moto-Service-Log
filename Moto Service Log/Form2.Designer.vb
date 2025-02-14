@@ -78,50 +78,50 @@ Partial Class form_dashboard
         Me.lbl_mechname = New System.Windows.Forms.Label()
         Me.lbl_mechanicid = New System.Windows.Forms.Label()
         Me.TabPage_Assig = New System.Windows.Forms.TabPage()
-        Me.TabPage_Bills = New System.Windows.Forms.TabPage()
-        Me.panel_assigtab = New System.Windows.Forms.Panel()
-        Me.lbl_servassignid = New System.Windows.Forms.Label()
-        Me.lbl_assign_regno = New System.Windows.Forms.Label()
-        Me.lbl_assign_serviceid = New System.Windows.Forms.Label()
-        Me.lbl_assign_mechanicid = New System.Windows.Forms.Label()
-        Me.lbl_servdate = New System.Windows.Forms.Label()
-        Me.lbl_servstatus = New System.Windows.Forms.Label()
-        Me.lbl_assign_servcost = New System.Windows.Forms.Label()
-        Me.txtbox_servassignid = New System.Windows.Forms.TextBox()
-        Me.combox_assign_regno = New System.Windows.Forms.ComboBox()
-        Me.combox_assign_servid = New System.Windows.Forms.ComboBox()
-        Me.combox_assign_mechid = New System.Windows.Forms.ComboBox()
-        Me.txtbox_assign_servcost = New System.Windows.Forms.TextBox()
-        Me.btn_assignserv = New System.Windows.Forms.Button()
-        Me.btn_assign_clear = New System.Windows.Forms.Button()
-        Me.DateTimePicker_assigtab = New System.Windows.Forms.DateTimePicker()
-        Me.combox_assign_status = New System.Windows.Forms.ComboBox()
-        Me.btn_getservcost = New System.Windows.Forms.Button()
-        Me.dgv_servassigntab = New System.Windows.Forms.DataGridView()
         Me.btn_assign_deleterow = New System.Windows.Forms.Button()
         Me.btn_assign_editrow = New System.Windows.Forms.Button()
         Me.btn_assign_viewdetails = New System.Windows.Forms.Button()
-        Me.panel_billstab = New System.Windows.Forms.Panel()
-        Me.lbl_billid = New System.Windows.Forms.Label()
-        Me.lbl_bills_regno = New System.Windows.Forms.Label()
-        Me.lbl_billdate = New System.Windows.Forms.Label()
-        Me.lbl_totalamt = New System.Windows.Forms.Label()
-        Me.lbl_paymode = New System.Windows.Forms.Label()
-        Me.lbl_bills_status = New System.Windows.Forms.Label()
-        Me.txtbox_billid = New System.Windows.Forms.TextBox()
-        Me.combox_bills_regno = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker_billstab = New System.Windows.Forms.DateTimePicker()
-        Me.btn_totalamt = New System.Windows.Forms.Button()
-        Me.txtbox_totalamt = New System.Windows.Forms.TextBox()
-        Me.combox_paymode = New System.Windows.Forms.ComboBox()
-        Me.combox_bills_status = New System.Windows.Forms.ComboBox()
-        Me.btn_addbill = New System.Windows.Forms.Button()
-        Me.btn_bills_clear = New System.Windows.Forms.Button()
-        Me.btn_gen_invoice = New System.Windows.Forms.Button()
-        Me.dgv_billstab = New System.Windows.Forms.DataGridView()
+        Me.dgv_servassigntab = New System.Windows.Forms.DataGridView()
+        Me.panel_assigtab = New System.Windows.Forms.Panel()
+        Me.btn_getservcost = New System.Windows.Forms.Button()
+        Me.combox_assign_status = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker_assigtab = New System.Windows.Forms.DateTimePicker()
+        Me.btn_assign_clear = New System.Windows.Forms.Button()
+        Me.btn_assignserv = New System.Windows.Forms.Button()
+        Me.txtbox_assign_servcost = New System.Windows.Forms.TextBox()
+        Me.combox_assign_mechid = New System.Windows.Forms.ComboBox()
+        Me.combox_assign_servid = New System.Windows.Forms.ComboBox()
+        Me.combox_assign_regno = New System.Windows.Forms.ComboBox()
+        Me.txtbox_servassignid = New System.Windows.Forms.TextBox()
+        Me.lbl_assign_servcost = New System.Windows.Forms.Label()
+        Me.lbl_servstatus = New System.Windows.Forms.Label()
+        Me.lbl_servdate = New System.Windows.Forms.Label()
+        Me.lbl_assign_mechanicid = New System.Windows.Forms.Label()
+        Me.lbl_assign_serviceid = New System.Windows.Forms.Label()
+        Me.lbl_assign_regno = New System.Windows.Forms.Label()
+        Me.lbl_servassignid = New System.Windows.Forms.Label()
+        Me.TabPage_Bills = New System.Windows.Forms.TabPage()
         Me.btn_bills_deleterow = New System.Windows.Forms.Button()
         Me.btn_bills_editrow = New System.Windows.Forms.Button()
         Me.btn_bills_viewdetails = New System.Windows.Forms.Button()
+        Me.dgv_billstab = New System.Windows.Forms.DataGridView()
+        Me.panel_billstab = New System.Windows.Forms.Panel()
+        Me.btn_gen_invoice = New System.Windows.Forms.Button()
+        Me.btn_bills_clear = New System.Windows.Forms.Button()
+        Me.btn_addbill = New System.Windows.Forms.Button()
+        Me.combox_bills_status = New System.Windows.Forms.ComboBox()
+        Me.combox_paymode = New System.Windows.Forms.ComboBox()
+        Me.btn_totalamt = New System.Windows.Forms.Button()
+        Me.txtbox_totalamt = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker_billstab = New System.Windows.Forms.DateTimePicker()
+        Me.combox_bills_regno = New System.Windows.Forms.ComboBox()
+        Me.txtbox_billid = New System.Windows.Forms.TextBox()
+        Me.lbl_bills_status = New System.Windows.Forms.Label()
+        Me.lbl_paymode = New System.Windows.Forms.Label()
+        Me.lbl_totalamt = New System.Windows.Forms.Label()
+        Me.lbl_billdate = New System.Windows.Forms.Label()
+        Me.lbl_bills_regno = New System.Windows.Forms.Label()
+        Me.lbl_billid = New System.Windows.Forms.Label()
         Me.tabcontrol_dashboard.SuspendLayout()
         Me.TabPage_Reg.SuspendLayout()
         CType(Me.dgv_regtab, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,11 +133,11 @@ Partial Class form_dashboard
         CType(Me.dgv_mechtab, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel_mechtab.SuspendLayout()
         Me.TabPage_Assig.SuspendLayout()
-        Me.TabPage_Bills.SuspendLayout()
-        Me.panel_assigtab.SuspendLayout()
         CType(Me.dgv_servassigntab, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panel_billstab.SuspendLayout()
+        Me.panel_assigtab.SuspendLayout()
+        Me.TabPage_Bills.SuspendLayout()
         CType(Me.dgv_billstab, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panel_billstab.SuspendLayout()
         Me.SuspendLayout()
         '
         'tabcontrol_dashboard
@@ -309,6 +309,7 @@ Partial Class form_dashboard
         '
         'txtbox_regno
         '
+        Me.txtbox_regno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtbox_regno.Location = New System.Drawing.Point(184, 44)
         Me.txtbox_regno.Name = "txtbox_regno"
         Me.txtbox_regno.Size = New System.Drawing.Size(254, 26)
@@ -693,200 +694,6 @@ Partial Class form_dashboard
         Me.TabPage_Assig.Text = "Service Assignments"
         Me.TabPage_Assig.UseVisualStyleBackColor = True
         '
-        'TabPage_Bills
-        '
-        Me.TabPage_Bills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TabPage_Bills.Controls.Add(Me.btn_bills_deleterow)
-        Me.TabPage_Bills.Controls.Add(Me.btn_bills_editrow)
-        Me.TabPage_Bills.Controls.Add(Me.btn_bills_viewdetails)
-        Me.TabPage_Bills.Controls.Add(Me.dgv_billstab)
-        Me.TabPage_Bills.Controls.Add(Me.panel_billstab)
-        Me.TabPage_Bills.Location = New System.Drawing.Point(4, 59)
-        Me.TabPage_Bills.Name = "TabPage_Bills"
-        Me.TabPage_Bills.Size = New System.Drawing.Size(1785, 875)
-        Me.TabPage_Bills.TabIndex = 4
-        Me.TabPage_Bills.Text = "Billing"
-        Me.TabPage_Bills.UseVisualStyleBackColor = True
-        '
-        'panel_assigtab
-        '
-        Me.panel_assigtab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panel_assigtab.Controls.Add(Me.btn_getservcost)
-        Me.panel_assigtab.Controls.Add(Me.combox_assign_status)
-        Me.panel_assigtab.Controls.Add(Me.DateTimePicker_assigtab)
-        Me.panel_assigtab.Controls.Add(Me.btn_assign_clear)
-        Me.panel_assigtab.Controls.Add(Me.btn_assignserv)
-        Me.panel_assigtab.Controls.Add(Me.txtbox_assign_servcost)
-        Me.panel_assigtab.Controls.Add(Me.combox_assign_mechid)
-        Me.panel_assigtab.Controls.Add(Me.combox_assign_servid)
-        Me.panel_assigtab.Controls.Add(Me.combox_assign_regno)
-        Me.panel_assigtab.Controls.Add(Me.txtbox_servassignid)
-        Me.panel_assigtab.Controls.Add(Me.lbl_assign_servcost)
-        Me.panel_assigtab.Controls.Add(Me.lbl_servstatus)
-        Me.panel_assigtab.Controls.Add(Me.lbl_servdate)
-        Me.panel_assigtab.Controls.Add(Me.lbl_assign_mechanicid)
-        Me.panel_assigtab.Controls.Add(Me.lbl_assign_serviceid)
-        Me.panel_assigtab.Controls.Add(Me.lbl_assign_regno)
-        Me.panel_assigtab.Controls.Add(Me.lbl_servassignid)
-        Me.panel_assigtab.Location = New System.Drawing.Point(26, 22)
-        Me.panel_assigtab.Name = "panel_assigtab"
-        Me.panel_assigtab.Size = New System.Drawing.Size(565, 787)
-        Me.panel_assigtab.TabIndex = 0
-        '
-        'lbl_servassignid
-        '
-        Me.lbl_servassignid.AutoSize = True
-        Me.lbl_servassignid.Location = New System.Drawing.Point(8, 44)
-        Me.lbl_servassignid.Name = "lbl_servassignid"
-        Me.lbl_servassignid.Size = New System.Drawing.Size(174, 20)
-        Me.lbl_servassignid.TabIndex = 0
-        Me.lbl_servassignid.Text = "Service Assignment ID:"
-        '
-        'lbl_assign_regno
-        '
-        Me.lbl_assign_regno.AutoSize = True
-        Me.lbl_assign_regno.Location = New System.Drawing.Point(26, 117)
-        Me.lbl_assign_regno.Name = "lbl_assign_regno"
-        Me.lbl_assign_regno.Size = New System.Drawing.Size(123, 20)
-        Me.lbl_assign_regno.TabIndex = 1
-        Me.lbl_assign_regno.Text = "Registration No:"
-        '
-        'lbl_assign_serviceid
-        '
-        Me.lbl_assign_serviceid.AutoSize = True
-        Me.lbl_assign_serviceid.Location = New System.Drawing.Point(26, 194)
-        Me.lbl_assign_serviceid.Name = "lbl_assign_serviceid"
-        Me.lbl_assign_serviceid.Size = New System.Drawing.Size(86, 20)
-        Me.lbl_assign_serviceid.TabIndex = 2
-        Me.lbl_assign_serviceid.Text = "Service ID:"
-        '
-        'lbl_assign_mechanicid
-        '
-        Me.lbl_assign_mechanicid.AutoSize = True
-        Me.lbl_assign_mechanicid.Location = New System.Drawing.Point(26, 269)
-        Me.lbl_assign_mechanicid.Name = "lbl_assign_mechanicid"
-        Me.lbl_assign_mechanicid.Size = New System.Drawing.Size(102, 20)
-        Me.lbl_assign_mechanicid.TabIndex = 3
-        Me.lbl_assign_mechanicid.Text = "Mechanic ID:"
-        '
-        'lbl_servdate
-        '
-        Me.lbl_servdate.AutoSize = True
-        Me.lbl_servdate.Location = New System.Drawing.Point(26, 348)
-        Me.lbl_servdate.Name = "lbl_servdate"
-        Me.lbl_servdate.Size = New System.Drawing.Size(104, 20)
-        Me.lbl_servdate.TabIndex = 4
-        Me.lbl_servdate.Text = "Service Date:"
-        '
-        'lbl_servstatus
-        '
-        Me.lbl_servstatus.AutoSize = True
-        Me.lbl_servstatus.Location = New System.Drawing.Point(26, 430)
-        Me.lbl_servstatus.Name = "lbl_servstatus"
-        Me.lbl_servstatus.Size = New System.Drawing.Size(60, 20)
-        Me.lbl_servstatus.TabIndex = 5
-        Me.lbl_servstatus.Text = "Status:"
-        '
-        'lbl_assign_servcost
-        '
-        Me.lbl_assign_servcost.AutoSize = True
-        Me.lbl_assign_servcost.Location = New System.Drawing.Point(26, 505)
-        Me.lbl_assign_servcost.Name = "lbl_assign_servcost"
-        Me.lbl_assign_servcost.Size = New System.Drawing.Size(102, 20)
-        Me.lbl_assign_servcost.TabIndex = 6
-        Me.lbl_assign_servcost.Text = "Service Cost:"
-        '
-        'txtbox_servassignid
-        '
-        Me.txtbox_servassignid.Location = New System.Drawing.Point(188, 44)
-        Me.txtbox_servassignid.Name = "txtbox_servassignid"
-        Me.txtbox_servassignid.Size = New System.Drawing.Size(250, 26)
-        Me.txtbox_servassignid.TabIndex = 7
-        '
-        'combox_assign_regno
-        '
-        Me.combox_assign_regno.FormattingEnabled = True
-        Me.combox_assign_regno.Location = New System.Drawing.Point(184, 117)
-        Me.combox_assign_regno.Name = "combox_assign_regno"
-        Me.combox_assign_regno.Size = New System.Drawing.Size(250, 28)
-        Me.combox_assign_regno.TabIndex = 8
-        '
-        'combox_assign_servid
-        '
-        Me.combox_assign_servid.FormattingEnabled = True
-        Me.combox_assign_servid.Location = New System.Drawing.Point(184, 194)
-        Me.combox_assign_servid.Name = "combox_assign_servid"
-        Me.combox_assign_servid.Size = New System.Drawing.Size(250, 28)
-        Me.combox_assign_servid.TabIndex = 9
-        '
-        'combox_assign_mechid
-        '
-        Me.combox_assign_mechid.FormattingEnabled = True
-        Me.combox_assign_mechid.Location = New System.Drawing.Point(184, 269)
-        Me.combox_assign_mechid.Name = "combox_assign_mechid"
-        Me.combox_assign_mechid.Size = New System.Drawing.Size(250, 28)
-        Me.combox_assign_mechid.TabIndex = 10
-        '
-        'txtbox_assign_servcost
-        '
-        Me.txtbox_assign_servcost.Location = New System.Drawing.Point(30, 568)
-        Me.txtbox_assign_servcost.Name = "txtbox_assign_servcost"
-        Me.txtbox_assign_servcost.ReadOnly = True
-        Me.txtbox_assign_servcost.Size = New System.Drawing.Size(250, 26)
-        Me.txtbox_assign_servcost.TabIndex = 13
-        '
-        'btn_assignserv
-        '
-        Me.btn_assignserv.Location = New System.Drawing.Point(81, 679)
-        Me.btn_assignserv.Name = "btn_assignserv"
-        Me.btn_assignserv.Size = New System.Drawing.Size(167, 49)
-        Me.btn_assignserv.TabIndex = 14
-        Me.btn_assignserv.Text = "Assign Service"
-        Me.btn_assignserv.UseVisualStyleBackColor = True
-        '
-        'btn_assign_clear
-        '
-        Me.btn_assign_clear.Location = New System.Drawing.Point(304, 679)
-        Me.btn_assign_clear.Name = "btn_assign_clear"
-        Me.btn_assign_clear.Size = New System.Drawing.Size(167, 49)
-        Me.btn_assign_clear.TabIndex = 15
-        Me.btn_assign_clear.Text = "Clear"
-        Me.btn_assign_clear.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker_assigtab
-        '
-        Me.DateTimePicker_assigtab.Location = New System.Drawing.Point(184, 348)
-        Me.DateTimePicker_assigtab.Name = "DateTimePicker_assigtab"
-        Me.DateTimePicker_assigtab.Size = New System.Drawing.Size(250, 26)
-        Me.DateTimePicker_assigtab.TabIndex = 1
-        '
-        'combox_assign_status
-        '
-        Me.combox_assign_status.FormattingEnabled = True
-        Me.combox_assign_status.Location = New System.Drawing.Point(184, 427)
-        Me.combox_assign_status.Name = "combox_assign_status"
-        Me.combox_assign_status.Size = New System.Drawing.Size(250, 28)
-        Me.combox_assign_status.TabIndex = 16
-        '
-        'btn_getservcost
-        '
-        Me.btn_getservcost.Location = New System.Drawing.Point(317, 557)
-        Me.btn_getservcost.Name = "btn_getservcost"
-        Me.btn_getservcost.Size = New System.Drawing.Size(229, 49)
-        Me.btn_getservcost.TabIndex = 17
-        Me.btn_getservcost.Text = "Get Service Cost"
-        Me.btn_getservcost.UseVisualStyleBackColor = True
-        '
-        'dgv_servassigntab
-        '
-        Me.dgv_servassigntab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_servassigntab.Location = New System.Drawing.Point(636, 22)
-        Me.dgv_servassigntab.Name = "dgv_servassigntab"
-        Me.dgv_servassigntab.RowHeadersWidth = 62
-        Me.dgv_servassigntab.RowTemplate.Height = 28
-        Me.dgv_servassigntab.Size = New System.Drawing.Size(1105, 602)
-        Me.dgv_servassigntab.TabIndex = 2
-        '
         'btn_assign_deleterow
         '
         Me.btn_assign_deleterow.Location = New System.Drawing.Point(1426, 703)
@@ -914,175 +721,199 @@ Partial Class form_dashboard
         Me.btn_assign_viewdetails.Text = "View Details"
         Me.btn_assign_viewdetails.UseVisualStyleBackColor = True
         '
-        'panel_billstab
+        'dgv_servassigntab
         '
-        Me.panel_billstab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panel_billstab.Controls.Add(Me.btn_gen_invoice)
-        Me.panel_billstab.Controls.Add(Me.btn_bills_clear)
-        Me.panel_billstab.Controls.Add(Me.btn_addbill)
-        Me.panel_billstab.Controls.Add(Me.combox_bills_status)
-        Me.panel_billstab.Controls.Add(Me.combox_paymode)
-        Me.panel_billstab.Controls.Add(Me.btn_totalamt)
-        Me.panel_billstab.Controls.Add(Me.txtbox_totalamt)
-        Me.panel_billstab.Controls.Add(Me.DateTimePicker_billstab)
-        Me.panel_billstab.Controls.Add(Me.combox_bills_regno)
-        Me.panel_billstab.Controls.Add(Me.txtbox_billid)
-        Me.panel_billstab.Controls.Add(Me.lbl_bills_status)
-        Me.panel_billstab.Controls.Add(Me.lbl_paymode)
-        Me.panel_billstab.Controls.Add(Me.lbl_totalamt)
-        Me.panel_billstab.Controls.Add(Me.lbl_billdate)
-        Me.panel_billstab.Controls.Add(Me.lbl_bills_regno)
-        Me.panel_billstab.Controls.Add(Me.lbl_billid)
-        Me.panel_billstab.Location = New System.Drawing.Point(26, 22)
-        Me.panel_billstab.Name = "panel_billstab"
-        Me.panel_billstab.Size = New System.Drawing.Size(565, 787)
-        Me.panel_billstab.TabIndex = 0
+        Me.dgv_servassigntab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_servassigntab.Location = New System.Drawing.Point(636, 22)
+        Me.dgv_servassigntab.Name = "dgv_servassigntab"
+        Me.dgv_servassigntab.RowHeadersWidth = 62
+        Me.dgv_servassigntab.RowTemplate.Height = 28
+        Me.dgv_servassigntab.Size = New System.Drawing.Size(1105, 602)
+        Me.dgv_servassigntab.TabIndex = 2
         '
-        'lbl_billid
+        'panel_assigtab
         '
-        Me.lbl_billid.AutoSize = True
-        Me.lbl_billid.Location = New System.Drawing.Point(26, 44)
-        Me.lbl_billid.Name = "lbl_billid"
-        Me.lbl_billid.Size = New System.Drawing.Size(54, 20)
-        Me.lbl_billid.TabIndex = 0
-        Me.lbl_billid.Text = "Bill ID:"
+        Me.panel_assigtab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panel_assigtab.Controls.Add(Me.btn_getservcost)
+        Me.panel_assigtab.Controls.Add(Me.combox_assign_status)
+        Me.panel_assigtab.Controls.Add(Me.DateTimePicker_assigtab)
+        Me.panel_assigtab.Controls.Add(Me.btn_assign_clear)
+        Me.panel_assigtab.Controls.Add(Me.btn_assignserv)
+        Me.panel_assigtab.Controls.Add(Me.txtbox_assign_servcost)
+        Me.panel_assigtab.Controls.Add(Me.combox_assign_mechid)
+        Me.panel_assigtab.Controls.Add(Me.combox_assign_servid)
+        Me.panel_assigtab.Controls.Add(Me.combox_assign_regno)
+        Me.panel_assigtab.Controls.Add(Me.txtbox_servassignid)
+        Me.panel_assigtab.Controls.Add(Me.lbl_assign_servcost)
+        Me.panel_assigtab.Controls.Add(Me.lbl_servstatus)
+        Me.panel_assigtab.Controls.Add(Me.lbl_servdate)
+        Me.panel_assigtab.Controls.Add(Me.lbl_assign_mechanicid)
+        Me.panel_assigtab.Controls.Add(Me.lbl_assign_serviceid)
+        Me.panel_assigtab.Controls.Add(Me.lbl_assign_regno)
+        Me.panel_assigtab.Controls.Add(Me.lbl_servassignid)
+        Me.panel_assigtab.Location = New System.Drawing.Point(26, 22)
+        Me.panel_assigtab.Name = "panel_assigtab"
+        Me.panel_assigtab.Size = New System.Drawing.Size(565, 787)
+        Me.panel_assigtab.TabIndex = 0
         '
-        'lbl_bills_regno
+        'btn_getservcost
         '
-        Me.lbl_bills_regno.AutoSize = True
-        Me.lbl_bills_regno.Location = New System.Drawing.Point(26, 113)
-        Me.lbl_bills_regno.Name = "lbl_bills_regno"
-        Me.lbl_bills_regno.Size = New System.Drawing.Size(123, 20)
-        Me.lbl_bills_regno.TabIndex = 1
-        Me.lbl_bills_regno.Text = "Registration No:"
+        Me.btn_getservcost.Location = New System.Drawing.Point(317, 557)
+        Me.btn_getservcost.Name = "btn_getservcost"
+        Me.btn_getservcost.Size = New System.Drawing.Size(229, 49)
+        Me.btn_getservcost.TabIndex = 17
+        Me.btn_getservcost.Text = "Get Service Cost"
+        Me.btn_getservcost.UseVisualStyleBackColor = True
         '
-        'lbl_billdate
+        'combox_assign_status
         '
-        Me.lbl_billdate.AutoSize = True
-        Me.lbl_billdate.Location = New System.Drawing.Point(26, 184)
-        Me.lbl_billdate.Name = "lbl_billdate"
-        Me.lbl_billdate.Size = New System.Drawing.Size(72, 20)
-        Me.lbl_billdate.TabIndex = 2
-        Me.lbl_billdate.Text = "Bill Date:"
+        Me.combox_assign_status.FormattingEnabled = True
+        Me.combox_assign_status.Location = New System.Drawing.Point(184, 427)
+        Me.combox_assign_status.Name = "combox_assign_status"
+        Me.combox_assign_status.Size = New System.Drawing.Size(250, 28)
+        Me.combox_assign_status.TabIndex = 16
         '
-        'lbl_totalamt
+        'DateTimePicker_assigtab
         '
-        Me.lbl_totalamt.AutoSize = True
-        Me.lbl_totalamt.Location = New System.Drawing.Point(26, 258)
-        Me.lbl_totalamt.Name = "lbl_totalamt"
-        Me.lbl_totalamt.Size = New System.Drawing.Size(108, 20)
-        Me.lbl_totalamt.TabIndex = 3
-        Me.lbl_totalamt.Text = "Total Amount:"
+        Me.DateTimePicker_assigtab.Location = New System.Drawing.Point(184, 348)
+        Me.DateTimePicker_assigtab.Name = "DateTimePicker_assigtab"
+        Me.DateTimePicker_assigtab.Size = New System.Drawing.Size(250, 26)
+        Me.DateTimePicker_assigtab.TabIndex = 1
         '
-        'lbl_paymode
+        'btn_assign_clear
         '
-        Me.lbl_paymode.AutoSize = True
-        Me.lbl_paymode.Location = New System.Drawing.Point(26, 429)
-        Me.lbl_paymode.Name = "lbl_paymode"
-        Me.lbl_paymode.Size = New System.Drawing.Size(119, 20)
-        Me.lbl_paymode.TabIndex = 4
-        Me.lbl_paymode.Text = "Payment Mode:"
+        Me.btn_assign_clear.Location = New System.Drawing.Point(304, 679)
+        Me.btn_assign_clear.Name = "btn_assign_clear"
+        Me.btn_assign_clear.Size = New System.Drawing.Size(167, 49)
+        Me.btn_assign_clear.TabIndex = 15
+        Me.btn_assign_clear.Text = "Clear"
+        Me.btn_assign_clear.UseVisualStyleBackColor = True
         '
-        'lbl_bills_status
+        'btn_assignserv
         '
-        Me.lbl_bills_status.AutoSize = True
-        Me.lbl_bills_status.Location = New System.Drawing.Point(26, 503)
-        Me.lbl_bills_status.Name = "lbl_bills_status"
-        Me.lbl_bills_status.Size = New System.Drawing.Size(60, 20)
-        Me.lbl_bills_status.TabIndex = 5
-        Me.lbl_bills_status.Text = "Status:"
+        Me.btn_assignserv.Location = New System.Drawing.Point(81, 679)
+        Me.btn_assignserv.Name = "btn_assignserv"
+        Me.btn_assignserv.Size = New System.Drawing.Size(167, 49)
+        Me.btn_assignserv.TabIndex = 14
+        Me.btn_assignserv.Text = "Assign Service"
+        Me.btn_assignserv.UseVisualStyleBackColor = True
         '
-        'txtbox_billid
+        'txtbox_assign_servcost
         '
-        Me.txtbox_billid.Location = New System.Drawing.Point(184, 44)
-        Me.txtbox_billid.Name = "txtbox_billid"
-        Me.txtbox_billid.Size = New System.Drawing.Size(251, 26)
-        Me.txtbox_billid.TabIndex = 6
+        Me.txtbox_assign_servcost.Location = New System.Drawing.Point(30, 568)
+        Me.txtbox_assign_servcost.Name = "txtbox_assign_servcost"
+        Me.txtbox_assign_servcost.ReadOnly = True
+        Me.txtbox_assign_servcost.Size = New System.Drawing.Size(250, 26)
+        Me.txtbox_assign_servcost.TabIndex = 13
         '
-        'combox_bills_regno
+        'combox_assign_mechid
         '
-        Me.combox_bills_regno.FormattingEnabled = True
-        Me.combox_bills_regno.Location = New System.Drawing.Point(184, 113)
-        Me.combox_bills_regno.Name = "combox_bills_regno"
-        Me.combox_bills_regno.Size = New System.Drawing.Size(251, 28)
-        Me.combox_bills_regno.TabIndex = 7
+        Me.combox_assign_mechid.FormattingEnabled = True
+        Me.combox_assign_mechid.Location = New System.Drawing.Point(184, 269)
+        Me.combox_assign_mechid.Name = "combox_assign_mechid"
+        Me.combox_assign_mechid.Size = New System.Drawing.Size(250, 28)
+        Me.combox_assign_mechid.TabIndex = 10
         '
-        'DateTimePicker_billstab
+        'combox_assign_servid
         '
-        Me.DateTimePicker_billstab.Location = New System.Drawing.Point(184, 184)
-        Me.DateTimePicker_billstab.Name = "DateTimePicker_billstab"
-        Me.DateTimePicker_billstab.Size = New System.Drawing.Size(251, 26)
-        Me.DateTimePicker_billstab.TabIndex = 8
+        Me.combox_assign_servid.FormattingEnabled = True
+        Me.combox_assign_servid.Location = New System.Drawing.Point(184, 194)
+        Me.combox_assign_servid.Name = "combox_assign_servid"
+        Me.combox_assign_servid.Size = New System.Drawing.Size(250, 28)
+        Me.combox_assign_servid.TabIndex = 9
         '
-        'btn_totalamt
+        'combox_assign_regno
         '
-        Me.btn_totalamt.Location = New System.Drawing.Point(317, 317)
-        Me.btn_totalamt.Name = "btn_totalamt"
-        Me.btn_totalamt.Size = New System.Drawing.Size(229, 49)
-        Me.btn_totalamt.TabIndex = 19
-        Me.btn_totalamt.Text = "Calculate"
-        Me.btn_totalamt.UseVisualStyleBackColor = True
+        Me.combox_assign_regno.FormattingEnabled = True
+        Me.combox_assign_regno.Location = New System.Drawing.Point(184, 117)
+        Me.combox_assign_regno.Name = "combox_assign_regno"
+        Me.combox_assign_regno.Size = New System.Drawing.Size(250, 28)
+        Me.combox_assign_regno.TabIndex = 8
         '
-        'txtbox_totalamt
+        'txtbox_servassignid
         '
-        Me.txtbox_totalamt.Location = New System.Drawing.Point(30, 328)
-        Me.txtbox_totalamt.Name = "txtbox_totalamt"
-        Me.txtbox_totalamt.ReadOnly = True
-        Me.txtbox_totalamt.Size = New System.Drawing.Size(250, 26)
-        Me.txtbox_totalamt.TabIndex = 18
+        Me.txtbox_servassignid.Location = New System.Drawing.Point(188, 44)
+        Me.txtbox_servassignid.Name = "txtbox_servassignid"
+        Me.txtbox_servassignid.Size = New System.Drawing.Size(250, 26)
+        Me.txtbox_servassignid.TabIndex = 7
         '
-        'combox_paymode
+        'lbl_assign_servcost
         '
-        Me.combox_paymode.FormattingEnabled = True
-        Me.combox_paymode.Location = New System.Drawing.Point(184, 429)
-        Me.combox_paymode.Name = "combox_paymode"
-        Me.combox_paymode.Size = New System.Drawing.Size(251, 28)
-        Me.combox_paymode.TabIndex = 20
+        Me.lbl_assign_servcost.AutoSize = True
+        Me.lbl_assign_servcost.Location = New System.Drawing.Point(26, 505)
+        Me.lbl_assign_servcost.Name = "lbl_assign_servcost"
+        Me.lbl_assign_servcost.Size = New System.Drawing.Size(102, 20)
+        Me.lbl_assign_servcost.TabIndex = 6
+        Me.lbl_assign_servcost.Text = "Service Cost:"
         '
-        'combox_bills_status
+        'lbl_servstatus
         '
-        Me.combox_bills_status.FormattingEnabled = True
-        Me.combox_bills_status.Location = New System.Drawing.Point(184, 503)
-        Me.combox_bills_status.Name = "combox_bills_status"
-        Me.combox_bills_status.Size = New System.Drawing.Size(251, 28)
-        Me.combox_bills_status.TabIndex = 21
+        Me.lbl_servstatus.AutoSize = True
+        Me.lbl_servstatus.Location = New System.Drawing.Point(26, 430)
+        Me.lbl_servstatus.Name = "lbl_servstatus"
+        Me.lbl_servstatus.Size = New System.Drawing.Size(60, 20)
+        Me.lbl_servstatus.TabIndex = 5
+        Me.lbl_servstatus.Text = "Status:"
         '
-        'btn_addbill
+        'lbl_servdate
         '
-        Me.btn_addbill.Location = New System.Drawing.Point(66, 608)
-        Me.btn_addbill.Name = "btn_addbill"
-        Me.btn_addbill.Size = New System.Drawing.Size(167, 49)
-        Me.btn_addbill.TabIndex = 22
-        Me.btn_addbill.Text = "Add Bill"
-        Me.btn_addbill.UseVisualStyleBackColor = True
+        Me.lbl_servdate.AutoSize = True
+        Me.lbl_servdate.Location = New System.Drawing.Point(26, 348)
+        Me.lbl_servdate.Name = "lbl_servdate"
+        Me.lbl_servdate.Size = New System.Drawing.Size(104, 20)
+        Me.lbl_servdate.TabIndex = 4
+        Me.lbl_servdate.Text = "Service Date:"
         '
-        'btn_bills_clear
+        'lbl_assign_mechanicid
         '
-        Me.btn_bills_clear.Location = New System.Drawing.Point(289, 608)
-        Me.btn_bills_clear.Name = "btn_bills_clear"
-        Me.btn_bills_clear.Size = New System.Drawing.Size(167, 49)
-        Me.btn_bills_clear.TabIndex = 23
-        Me.btn_bills_clear.Text = "Clear"
-        Me.btn_bills_clear.UseVisualStyleBackColor = True
+        Me.lbl_assign_mechanicid.AutoSize = True
+        Me.lbl_assign_mechanicid.Location = New System.Drawing.Point(26, 269)
+        Me.lbl_assign_mechanicid.Name = "lbl_assign_mechanicid"
+        Me.lbl_assign_mechanicid.Size = New System.Drawing.Size(102, 20)
+        Me.lbl_assign_mechanicid.TabIndex = 3
+        Me.lbl_assign_mechanicid.Text = "Mechanic ID:"
         '
-        'btn_gen_invoice
+        'lbl_assign_serviceid
         '
-        Me.btn_gen_invoice.Location = New System.Drawing.Point(156, 696)
-        Me.btn_gen_invoice.Name = "btn_gen_invoice"
-        Me.btn_gen_invoice.Size = New System.Drawing.Size(212, 49)
-        Me.btn_gen_invoice.TabIndex = 24
-        Me.btn_gen_invoice.Text = "Generate Invoice"
-        Me.btn_gen_invoice.UseVisualStyleBackColor = True
+        Me.lbl_assign_serviceid.AutoSize = True
+        Me.lbl_assign_serviceid.Location = New System.Drawing.Point(26, 194)
+        Me.lbl_assign_serviceid.Name = "lbl_assign_serviceid"
+        Me.lbl_assign_serviceid.Size = New System.Drawing.Size(86, 20)
+        Me.lbl_assign_serviceid.TabIndex = 2
+        Me.lbl_assign_serviceid.Text = "Service ID:"
         '
-        'dgv_billstab
+        'lbl_assign_regno
         '
-        Me.dgv_billstab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_billstab.Location = New System.Drawing.Point(636, 22)
-        Me.dgv_billstab.Name = "dgv_billstab"
-        Me.dgv_billstab.RowHeadersWidth = 62
-        Me.dgv_billstab.RowTemplate.Height = 28
-        Me.dgv_billstab.Size = New System.Drawing.Size(1105, 602)
-        Me.dgv_billstab.TabIndex = 3
+        Me.lbl_assign_regno.AutoSize = True
+        Me.lbl_assign_regno.Location = New System.Drawing.Point(26, 117)
+        Me.lbl_assign_regno.Name = "lbl_assign_regno"
+        Me.lbl_assign_regno.Size = New System.Drawing.Size(123, 20)
+        Me.lbl_assign_regno.TabIndex = 1
+        Me.lbl_assign_regno.Text = "Registration No:"
+        '
+        'lbl_servassignid
+        '
+        Me.lbl_servassignid.AutoSize = True
+        Me.lbl_servassignid.Location = New System.Drawing.Point(8, 44)
+        Me.lbl_servassignid.Name = "lbl_servassignid"
+        Me.lbl_servassignid.Size = New System.Drawing.Size(174, 20)
+        Me.lbl_servassignid.TabIndex = 0
+        Me.lbl_servassignid.Text = "Service Assignment ID:"
+        '
+        'TabPage_Bills
+        '
+        Me.TabPage_Bills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage_Bills.Controls.Add(Me.btn_bills_deleterow)
+        Me.TabPage_Bills.Controls.Add(Me.btn_bills_editrow)
+        Me.TabPage_Bills.Controls.Add(Me.btn_bills_viewdetails)
+        Me.TabPage_Bills.Controls.Add(Me.dgv_billstab)
+        Me.TabPage_Bills.Controls.Add(Me.panel_billstab)
+        Me.TabPage_Bills.Location = New System.Drawing.Point(4, 59)
+        Me.TabPage_Bills.Name = "TabPage_Bills"
+        Me.TabPage_Bills.Size = New System.Drawing.Size(1785, 875)
+        Me.TabPage_Bills.TabIndex = 4
+        Me.TabPage_Bills.Text = "Billing"
+        Me.TabPage_Bills.UseVisualStyleBackColor = True
         '
         'btn_bills_deleterow
         '
@@ -1111,6 +942,176 @@ Partial Class form_dashboard
         Me.btn_bills_viewdetails.Text = "View Details"
         Me.btn_bills_viewdetails.UseVisualStyleBackColor = True
         '
+        'dgv_billstab
+        '
+        Me.dgv_billstab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_billstab.Location = New System.Drawing.Point(636, 22)
+        Me.dgv_billstab.Name = "dgv_billstab"
+        Me.dgv_billstab.RowHeadersWidth = 62
+        Me.dgv_billstab.RowTemplate.Height = 28
+        Me.dgv_billstab.Size = New System.Drawing.Size(1105, 602)
+        Me.dgv_billstab.TabIndex = 3
+        '
+        'panel_billstab
+        '
+        Me.panel_billstab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panel_billstab.Controls.Add(Me.btn_gen_invoice)
+        Me.panel_billstab.Controls.Add(Me.btn_bills_clear)
+        Me.panel_billstab.Controls.Add(Me.btn_addbill)
+        Me.panel_billstab.Controls.Add(Me.combox_bills_status)
+        Me.panel_billstab.Controls.Add(Me.combox_paymode)
+        Me.panel_billstab.Controls.Add(Me.btn_totalamt)
+        Me.panel_billstab.Controls.Add(Me.txtbox_totalamt)
+        Me.panel_billstab.Controls.Add(Me.DateTimePicker_billstab)
+        Me.panel_billstab.Controls.Add(Me.combox_bills_regno)
+        Me.panel_billstab.Controls.Add(Me.txtbox_billid)
+        Me.panel_billstab.Controls.Add(Me.lbl_bills_status)
+        Me.panel_billstab.Controls.Add(Me.lbl_paymode)
+        Me.panel_billstab.Controls.Add(Me.lbl_totalamt)
+        Me.panel_billstab.Controls.Add(Me.lbl_billdate)
+        Me.panel_billstab.Controls.Add(Me.lbl_bills_regno)
+        Me.panel_billstab.Controls.Add(Me.lbl_billid)
+        Me.panel_billstab.Location = New System.Drawing.Point(26, 22)
+        Me.panel_billstab.Name = "panel_billstab"
+        Me.panel_billstab.Size = New System.Drawing.Size(565, 787)
+        Me.panel_billstab.TabIndex = 0
+        '
+        'btn_gen_invoice
+        '
+        Me.btn_gen_invoice.Location = New System.Drawing.Point(156, 696)
+        Me.btn_gen_invoice.Name = "btn_gen_invoice"
+        Me.btn_gen_invoice.Size = New System.Drawing.Size(212, 49)
+        Me.btn_gen_invoice.TabIndex = 24
+        Me.btn_gen_invoice.Text = "Generate Invoice"
+        Me.btn_gen_invoice.UseVisualStyleBackColor = True
+        '
+        'btn_bills_clear
+        '
+        Me.btn_bills_clear.Location = New System.Drawing.Point(289, 608)
+        Me.btn_bills_clear.Name = "btn_bills_clear"
+        Me.btn_bills_clear.Size = New System.Drawing.Size(167, 49)
+        Me.btn_bills_clear.TabIndex = 23
+        Me.btn_bills_clear.Text = "Clear"
+        Me.btn_bills_clear.UseVisualStyleBackColor = True
+        '
+        'btn_addbill
+        '
+        Me.btn_addbill.Location = New System.Drawing.Point(66, 608)
+        Me.btn_addbill.Name = "btn_addbill"
+        Me.btn_addbill.Size = New System.Drawing.Size(167, 49)
+        Me.btn_addbill.TabIndex = 22
+        Me.btn_addbill.Text = "Add Bill"
+        Me.btn_addbill.UseVisualStyleBackColor = True
+        '
+        'combox_bills_status
+        '
+        Me.combox_bills_status.FormattingEnabled = True
+        Me.combox_bills_status.Location = New System.Drawing.Point(184, 503)
+        Me.combox_bills_status.Name = "combox_bills_status"
+        Me.combox_bills_status.Size = New System.Drawing.Size(251, 28)
+        Me.combox_bills_status.TabIndex = 21
+        '
+        'combox_paymode
+        '
+        Me.combox_paymode.FormattingEnabled = True
+        Me.combox_paymode.Location = New System.Drawing.Point(184, 429)
+        Me.combox_paymode.Name = "combox_paymode"
+        Me.combox_paymode.Size = New System.Drawing.Size(251, 28)
+        Me.combox_paymode.TabIndex = 20
+        '
+        'btn_totalamt
+        '
+        Me.btn_totalamt.Location = New System.Drawing.Point(317, 317)
+        Me.btn_totalamt.Name = "btn_totalamt"
+        Me.btn_totalamt.Size = New System.Drawing.Size(229, 49)
+        Me.btn_totalamt.TabIndex = 19
+        Me.btn_totalamt.Text = "Calculate"
+        Me.btn_totalamt.UseVisualStyleBackColor = True
+        '
+        'txtbox_totalamt
+        '
+        Me.txtbox_totalamt.Location = New System.Drawing.Point(30, 328)
+        Me.txtbox_totalamt.Name = "txtbox_totalamt"
+        Me.txtbox_totalamt.ReadOnly = True
+        Me.txtbox_totalamt.Size = New System.Drawing.Size(250, 26)
+        Me.txtbox_totalamt.TabIndex = 18
+        '
+        'DateTimePicker_billstab
+        '
+        Me.DateTimePicker_billstab.Location = New System.Drawing.Point(184, 184)
+        Me.DateTimePicker_billstab.Name = "DateTimePicker_billstab"
+        Me.DateTimePicker_billstab.Size = New System.Drawing.Size(251, 26)
+        Me.DateTimePicker_billstab.TabIndex = 8
+        '
+        'combox_bills_regno
+        '
+        Me.combox_bills_regno.FormattingEnabled = True
+        Me.combox_bills_regno.Location = New System.Drawing.Point(184, 113)
+        Me.combox_bills_regno.Name = "combox_bills_regno"
+        Me.combox_bills_regno.Size = New System.Drawing.Size(251, 28)
+        Me.combox_bills_regno.TabIndex = 7
+        '
+        'txtbox_billid
+        '
+        Me.txtbox_billid.Location = New System.Drawing.Point(184, 44)
+        Me.txtbox_billid.Name = "txtbox_billid"
+        Me.txtbox_billid.Size = New System.Drawing.Size(251, 26)
+        Me.txtbox_billid.TabIndex = 6
+        '
+        'lbl_bills_status
+        '
+        Me.lbl_bills_status.AutoSize = True
+        Me.lbl_bills_status.Location = New System.Drawing.Point(26, 503)
+        Me.lbl_bills_status.Name = "lbl_bills_status"
+        Me.lbl_bills_status.Size = New System.Drawing.Size(60, 20)
+        Me.lbl_bills_status.TabIndex = 5
+        Me.lbl_bills_status.Text = "Status:"
+        '
+        'lbl_paymode
+        '
+        Me.lbl_paymode.AutoSize = True
+        Me.lbl_paymode.Location = New System.Drawing.Point(26, 429)
+        Me.lbl_paymode.Name = "lbl_paymode"
+        Me.lbl_paymode.Size = New System.Drawing.Size(119, 20)
+        Me.lbl_paymode.TabIndex = 4
+        Me.lbl_paymode.Text = "Payment Mode:"
+        '
+        'lbl_totalamt
+        '
+        Me.lbl_totalamt.AutoSize = True
+        Me.lbl_totalamt.Location = New System.Drawing.Point(26, 258)
+        Me.lbl_totalamt.Name = "lbl_totalamt"
+        Me.lbl_totalamt.Size = New System.Drawing.Size(108, 20)
+        Me.lbl_totalamt.TabIndex = 3
+        Me.lbl_totalamt.Text = "Total Amount:"
+        '
+        'lbl_billdate
+        '
+        Me.lbl_billdate.AutoSize = True
+        Me.lbl_billdate.Location = New System.Drawing.Point(26, 184)
+        Me.lbl_billdate.Name = "lbl_billdate"
+        Me.lbl_billdate.Size = New System.Drawing.Size(72, 20)
+        Me.lbl_billdate.TabIndex = 2
+        Me.lbl_billdate.Text = "Bill Date:"
+        '
+        'lbl_bills_regno
+        '
+        Me.lbl_bills_regno.AutoSize = True
+        Me.lbl_bills_regno.Location = New System.Drawing.Point(26, 113)
+        Me.lbl_bills_regno.Name = "lbl_bills_regno"
+        Me.lbl_bills_regno.Size = New System.Drawing.Size(123, 20)
+        Me.lbl_bills_regno.TabIndex = 1
+        Me.lbl_bills_regno.Text = "Registration No:"
+        '
+        'lbl_billid
+        '
+        Me.lbl_billid.AutoSize = True
+        Me.lbl_billid.Location = New System.Drawing.Point(26, 44)
+        Me.lbl_billid.Name = "lbl_billid"
+        Me.lbl_billid.Size = New System.Drawing.Size(54, 20)
+        Me.lbl_billid.TabIndex = 0
+        Me.lbl_billid.Text = "Bill ID:"
+        '
         'form_dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -1136,13 +1137,13 @@ Partial Class form_dashboard
         Me.panel_mechtab.ResumeLayout(False)
         Me.panel_mechtab.PerformLayout()
         Me.TabPage_Assig.ResumeLayout(False)
-        Me.TabPage_Bills.ResumeLayout(False)
+        CType(Me.dgv_servassigntab, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panel_assigtab.ResumeLayout(False)
         Me.panel_assigtab.PerformLayout()
-        CType(Me.dgv_servassigntab, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage_Bills.ResumeLayout(False)
+        CType(Me.dgv_billstab, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panel_billstab.ResumeLayout(False)
         Me.panel_billstab.PerformLayout()
-        CType(Me.dgv_billstab, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

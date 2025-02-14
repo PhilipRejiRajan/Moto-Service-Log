@@ -96,6 +96,7 @@ Partial Class form_Login
         Me.Controls.Add(Me.lbl_pword)
         Me.Controls.Add(Me.lbl_uname)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "form_Login"

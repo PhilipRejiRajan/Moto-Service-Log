@@ -6,7 +6,7 @@
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         Dim username As String = txtbox_uname.Text
         Dim password As String = txtbox_pword.Text
-        If username = "admin" And password = "admin1234" Then
+        If username = "admin" And password = "1234" Then
             MsgBox("Login Successful!")
             openDashboard()
         Else
@@ -23,5 +23,12 @@
 
     Private Sub form_Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
+    End Sub
+
+    Private Sub form_Login_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            SendKeys.Send("{TAB}")
+        End If
     End Sub
 End Class
