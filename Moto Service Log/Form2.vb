@@ -186,7 +186,155 @@ Public Class form_dashboard
         txtbox_model.Text = dgv_regtab.SelectedRows(0).Cells(6).Value
         txtbox_yearofmfd.Text = dgv_regtab.SelectedRows(0).Cells(7).Value
     End Sub
+
+    'End of Registration Tab Code
+
+    'Service Tab Code:
+
+    'Function to Load Data into DataGridView from Services Table
+    Private Sub Load_ServTab_Data()
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting all details from Services Table
+                cmd.CommandText = "select * from Services_Table"
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+
+                'Displaying details in DataGridView
+                Dim datatable1 As New DataTable()
+                datatable1.Load(datareader1)
+                dgv_servtab.DataSource = datatable1
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'View selected row details in Textboxes
+    Private Sub dgv_servtab_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_servtab.CellClick
+        txtbox_serviceid.Text = dgv_servtab.SelectedRows(0).Cells(0).Value
+        txtbox_servname.Text = dgv_servtab.SelectedRows(0).Cells(1).Value
+        txtbox_servcost.Text = dgv_servtab.SelectedRows(0).Cells(2).Value
+    End Sub
+
+    'Add Service Button: Add Service Name and Cost
+    Private Sub btn_addservice_Click(sender As Object, e As EventArgs) Handles btn_addservice.Click
+
+        'Check if Service Name and Cost are entered
+        If txtbox_servname.Text = "" Or txtbox_servcost.Text = "" Then
+            MessageBox.Show("Please enter valid Service Name and Cost!")
+            Return
+
+        Else Using conn As New SqlConnection(connectionString)
+                Try
+                    conn.Open()
+                    Dim cmd As New SqlCommand()
+                    cmd.Connection = conn
+
+                    'Inserting details into Services Table
+                    cmd.CommandText = "insert into Services_Table([servname],[servcost]) values (@servname, @servcost)"
+                    cmd.Parameters.AddWithValue("@servname", txtbox_servname.Text)
+                    cmd.Parameters.AddWithValue("@servcost", txtbox_servcost.Text)
+
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                    MessageBox.Show("Rows inserted: " & rowsAffected)
+
+                    Load_ServTab_Data()
+
+                Catch ex As Exception
+                    MessageBox.Show("Error:" & ex.Message)
+                End Try
+            End Using
+        End If
+
+    End Sub
+
+    Private Sub btn_serv_clear_Click(sender As Object, e As EventArgs) Handles btn_serv_clear.Click
+        txtbox_serviceid.Clear()
+        txtbox_servname.Clear()
+        txtbox_servcost.Clear()
+    End Sub
+
+    'View Details Button: View all details from Services Table
+    Private Sub btn_serv_viewdetails_Click(sender As Object, e As EventArgs) Handles btn_serv_viewdetails.Click
+        Load_ServTab_Data()
+    End Sub
+
+    'Edit Row Button: Edit selected row in Services Table
+    Private Sub btn_serv_editrow_Click(sender As Object, e As EventArgs) Handles btn_serv_editrow.Click
+
+        'Check if any row is selected
+        If dgv_servtab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Updating selected row in Services Table
+                cmd.CommandText = "update Services_Table set servname = @servname, servcost = @servcost where serviceid = @serviceid"
+                cmd.Parameters.AddWithValue("@serviceid", txtbox_serviceid.Text)
+                cmd.Parameters.AddWithValue("@servname", txtbox_servname.Text)
+                cmd.Parameters.AddWithValue("@servcost", txtbox_servcost.Text)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
+
+                Load_ServTab_Data()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'Delete Row Button: Delete selected row from Services Table
+    Private Sub btn_serv_deleterow_Click(sender As Object, e As EventArgs) Handles btn_serv_deleterow.Click
+
+        'Check if any row is selected
+        If dgv_servtab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to delete!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to delete selected row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Deleting selected row from Services Table
+                cmd.CommandText = "delete from Services_Table where serviceid = @serviceid"
+                cmd.Parameters.AddWithValue("@serviceid", dgv_servtab.SelectedRows(0).Cells(0).Value)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows deleted: " & rowsAffected)
+
+                Load_ServTab_Data()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'End of Service Tab Code
 End Class
-
-' End of Registration Tab Code
-

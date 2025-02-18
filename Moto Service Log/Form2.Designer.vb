@@ -437,6 +437,8 @@ Partial Class form_dashboard
         '
         'dgv_servtab
         '
+        Me.dgv_servtab.AllowUserToAddRows = False
+        Me.dgv_servtab.AllowUserToDeleteRows = False
         Me.dgv_servtab.AllowUserToResizeColumns = False
         Me.dgv_servtab.AllowUserToResizeRows = False
         Me.dgv_servtab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -502,6 +504,7 @@ Partial Class form_dashboard
         '
         Me.txtbox_serviceid.Location = New System.Drawing.Point(184, 44)
         Me.txtbox_serviceid.Name = "txtbox_serviceid"
+        Me.txtbox_serviceid.ReadOnly = True
         Me.txtbox_serviceid.Size = New System.Drawing.Size(243, 26)
         Me.txtbox_serviceid.TabIndex = 1
         '
