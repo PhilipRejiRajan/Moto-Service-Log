@@ -212,6 +212,7 @@ Partial Class form_dashboard
         Me.dgv_regtab.Name = "dgv_regtab"
         Me.dgv_regtab.RowHeadersWidth = 62
         Me.dgv_regtab.RowTemplate.Height = 28
+        Me.dgv_regtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_regtab.Size = New System.Drawing.Size(1105, 602)
         Me.dgv_regtab.TabIndex = 1
         '
@@ -262,6 +263,7 @@ Partial Class form_dashboard
         'txtbox_yearofmfd
         '
         Me.txtbox_yearofmfd.Location = New System.Drawing.Point(184, 575)
+        Me.txtbox_yearofmfd.MaxLength = 4
         Me.txtbox_yearofmfd.Name = "txtbox_yearofmfd"
         Me.txtbox_yearofmfd.Size = New System.Drawing.Size(254, 26)
         Me.txtbox_yearofmfd.TabIndex = 15
@@ -298,6 +300,7 @@ Partial Class form_dashboard
         'txtbox_phoneno
         '
         Me.txtbox_phoneno.Location = New System.Drawing.Point(184, 178)
+        Me.txtbox_phoneno.MaxLength = 10
         Me.txtbox_phoneno.Name = "txtbox_phoneno"
         Me.txtbox_phoneno.Size = New System.Drawing.Size(254, 26)
         Me.txtbox_phoneno.TabIndex = 10
@@ -443,6 +446,7 @@ Partial Class form_dashboard
         Me.dgv_servtab.Name = "dgv_servtab"
         Me.dgv_servtab.RowHeadersWidth = 62
         Me.dgv_servtab.RowTemplate.Height = 28
+        Me.dgv_servtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_servtab.Size = New System.Drawing.Size(1105, 602)
         Me.dgv_servtab.TabIndex = 1
         '
@@ -577,6 +581,7 @@ Partial Class form_dashboard
         Me.dgv_mechtab.Name = "dgv_mechtab"
         Me.dgv_mechtab.RowHeadersWidth = 62
         Me.dgv_mechtab.RowTemplate.Height = 28
+        Me.dgv_mechtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_mechtab.Size = New System.Drawing.Size(1105, 602)
         Me.dgv_mechtab.TabIndex = 1
         '
@@ -627,6 +632,7 @@ Partial Class form_dashboard
         'txtbox_mech_phoneno
         '
         Me.txtbox_mech_phoneno.Location = New System.Drawing.Point(184, 195)
+        Me.txtbox_mech_phoneno.MaxLength = 10
         Me.txtbox_mech_phoneno.Name = "txtbox_mech_phoneno"
         Me.txtbox_mech_phoneno.Size = New System.Drawing.Size(247, 26)
         Me.txtbox_mech_phoneno.TabIndex = 6
@@ -730,6 +736,7 @@ Partial Class form_dashboard
         Me.dgv_servassigntab.Name = "dgv_servassigntab"
         Me.dgv_servassigntab.RowHeadersWidth = 62
         Me.dgv_servassigntab.RowTemplate.Height = 28
+        Me.dgv_servassigntab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_servassigntab.Size = New System.Drawing.Size(1105, 602)
         Me.dgv_servassigntab.TabIndex = 2
         '
@@ -951,6 +958,7 @@ Partial Class form_dashboard
         Me.dgv_billstab.Name = "dgv_billstab"
         Me.dgv_billstab.RowHeadersWidth = 62
         Me.dgv_billstab.RowTemplate.Height = 28
+        Me.dgv_billstab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_billstab.Size = New System.Drawing.Size(1105, 602)
         Me.dgv_billstab.TabIndex = 3
         '
