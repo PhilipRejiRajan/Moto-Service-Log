@@ -210,6 +210,7 @@ Partial Class form_dashboard
         Me.dgv_regtab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_regtab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_regtab.Name = "dgv_regtab"
+        Me.dgv_regtab.ReadOnly = True
         Me.dgv_regtab.RowHeadersWidth = 62
         Me.dgv_regtab.RowTemplate.Height = 28
         Me.dgv_regtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -446,6 +447,7 @@ Partial Class form_dashboard
         Me.dgv_servtab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_servtab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_servtab.Name = "dgv_servtab"
+        Me.dgv_servtab.ReadOnly = True
         Me.dgv_servtab.RowHeadersWidth = 62
         Me.dgv_servtab.RowTemplate.Height = 28
         Me.dgv_servtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -579,9 +581,14 @@ Partial Class form_dashboard
         '
         'dgv_mechtab
         '
+        Me.dgv_mechtab.AllowUserToAddRows = False
+        Me.dgv_mechtab.AllowUserToDeleteRows = False
+        Me.dgv_mechtab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv_mechtab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv_mechtab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_mechtab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_mechtab.Name = "dgv_mechtab"
+        Me.dgv_mechtab.ReadOnly = True
         Me.dgv_mechtab.RowHeadersWidth = 62
         Me.dgv_mechtab.RowTemplate.Height = 28
         Me.dgv_mechtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -651,6 +658,7 @@ Partial Class form_dashboard
         '
         Me.txtbox_mechanicid.Location = New System.Drawing.Point(184, 44)
         Me.txtbox_mechanicid.Name = "txtbox_mechanicid"
+        Me.txtbox_mechanicid.ReadOnly = True
         Me.txtbox_mechanicid.Size = New System.Drawing.Size(247, 26)
         Me.txtbox_mechanicid.TabIndex = 4
         '
@@ -734,6 +742,8 @@ Partial Class form_dashboard
         '
         'dgv_servassigntab
         '
+        Me.dgv_servassigntab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv_servassigntab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv_servassigntab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_servassigntab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_servassigntab.Name = "dgv_servassigntab"
@@ -846,6 +856,7 @@ Partial Class form_dashboard
         '
         Me.txtbox_servassignid.Location = New System.Drawing.Point(188, 44)
         Me.txtbox_servassignid.Name = "txtbox_servassignid"
+        Me.txtbox_servassignid.ReadOnly = True
         Me.txtbox_servassignid.Size = New System.Drawing.Size(250, 26)
         Me.txtbox_servassignid.TabIndex = 7
         '
@@ -956,6 +967,8 @@ Partial Class form_dashboard
         '
         'dgv_billstab
         '
+        Me.dgv_billstab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv_billstab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv_billstab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_billstab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_billstab.Name = "dgv_billstab"
@@ -1068,6 +1081,7 @@ Partial Class form_dashboard
         '
         Me.txtbox_billid.Location = New System.Drawing.Point(184, 44)
         Me.txtbox_billid.Name = "txtbox_billid"
+        Me.txtbox_billid.ReadOnly = True
         Me.txtbox_billid.Size = New System.Drawing.Size(251, 26)
         Me.txtbox_billid.TabIndex = 6
         '

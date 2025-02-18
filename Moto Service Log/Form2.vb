@@ -142,6 +142,12 @@ Public Class form_dashboard
             Return
         End If
 
+        'Check if Registration Number is Empty or Zero and all other details are entered
+        If txtbox_regno.Text = "" Or txtbox_regno.Text = "0" Or txtbox_custname.Text = "" Or txtbox_phoneno.Text = "" Or txtbox_address.Text = "" Or txtbox_email.Text = "" Or txtbox_make.Text = "" Or txtbox_model.Text = "" Or txtbox_yearofmfd.Text = "" Then
+            MessageBox.Show("Please enter valid Registration Number and Details!")
+            Return
+        End If
+
         If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
             Return
         End If
@@ -254,6 +260,7 @@ Public Class form_dashboard
 
     End Sub
 
+    'Clear Button: Clear all Textboxes
     Private Sub btn_serv_clear_Click(sender As Object, e As EventArgs) Handles btn_serv_clear.Click
         txtbox_serviceid.Clear()
         txtbox_servname.Clear()
@@ -271,6 +278,12 @@ Public Class form_dashboard
         'Check if any row is selected
         If dgv_servtab.SelectedRows.Count = 0 Then
             MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        'Check if Service Name and Cost are entered
+        If txtbox_servname.Text = "" Or txtbox_servcost.Text = "" Then
+            MessageBox.Show("Please enter valid Service Name and Cost!")
             Return
         End If
 
@@ -337,4 +350,165 @@ Public Class form_dashboard
     End Sub
 
     'End of Service Tab Code
+
+    'Mechanics Tab Code:
+
+    'Function to Load Data into DataGridView from Mechanics Table
+    Private Sub Load_MechTab_Data()
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting all details from Mechanics Table
+                cmd.CommandText = "select * from Mechanics_Table"
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+
+                'Displaying details in DataGridView
+                Dim datatable1 As New DataTable()
+                datatable1.Load(datareader1)
+                dgv_mechtab.DataSource = datatable1
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'View selected row details in Textboxes
+    Private Sub dgv_mechtab_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_mechtab.CellClick
+        txtbox_mechanicid.Text = dgv_mechtab.SelectedRows(0).Cells(0).Value
+        txtbox_mechname.Text = dgv_mechtab.SelectedRows(0).Cells(1).Value
+        txtbox_mech_phoneno.Text = dgv_mechtab.SelectedRows(0).Cells(2).Value
+        txtbox_expertise.Text = dgv_mechtab.SelectedRows(0).Cells(3).Value
+    End Sub
+
+    'Add Mechanic Button: Add Mechanic Name, Phone Number and Expertise
+    Private Sub btn_addmechanic_Click(sender As Object, e As EventArgs) Handles btn_addmechanic.Click
+
+        'Check if Mechanic Name, Phone Number and Expertise are entered
+        If txtbox_mechname.Text = "" Or txtbox_mech_phoneno.Text = "" Or txtbox_expertise.Text = "" Then
+            MessageBox.Show("Please enter valid Mechanic Name, Phone Number and Expertise!")
+            Return
+
+        Else Using conn As New SqlConnection(connectionString)
+                Try
+                    conn.Open()
+                    Dim cmd As New SqlCommand()
+                    cmd.Connection = conn
+
+                    'Inserting details into Mechanics Table
+                    cmd.CommandText = "insert into Mechanics_Table([mechname],[phoneno],[expertise]) values (@mechname, @phoneno, @expertise)"
+                    cmd.Parameters.AddWithValue("@mechname", txtbox_mechname.Text)
+                    cmd.Parameters.AddWithValue("@phoneno", txtbox_mech_phoneno.Text)
+                    cmd.Parameters.AddWithValue("@expertise", txtbox_expertise.Text)
+
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                    MessageBox.Show("Rows inserted: " & rowsAffected)
+
+                    Load_MechTab_Data()
+
+                Catch ex As Exception
+                    MessageBox.Show("Error:" & ex.Message)
+                End Try
+            End Using
+        End If
+
+    End Sub
+
+    'Clear Button: Clear all Textboxes
+    Private Sub btn_mech_clear_Click(sender As Object, e As EventArgs) Handles btn_mech_clear.Click
+        txtbox_mechanicid.Clear()
+        txtbox_mechname.Clear()
+        txtbox_mech_phoneno.Clear()
+        txtbox_expertise.Clear()
+    End Sub
+
+    'View Details Button: View all details from Mechanics Table
+    Private Sub btn_mech_viewdetails_Click(sender As Object, e As EventArgs) Handles btn_mech_viewdetails.Click
+        Load_MechTab_Data()
+    End Sub
+
+    'Edit Row Button: Edit selected row in Mechanics Table
+    Private Sub btn_mech_editrow_Click(sender As Object, e As EventArgs) Handles btn_mech_editrow.Click
+
+        'Check if any row is selected
+        If dgv_mechtab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        'Check if Mechanic Name, Phone Number and Expertise are entered
+        If txtbox_mechname.Text = "" Or txtbox_mech_phoneno.Text = "" Or txtbox_expertise.Text = "" Then
+            MessageBox.Show("Please enter valid Mechanic Name, Phone Number and Expertise!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Updating selected row in Mechanics Table
+                cmd.CommandText = "update Mechanics_Table set mechname = @mechname, phoneno = @phoneno, expertise = @expertise where mechanicid = @mechanicid"
+                cmd.Parameters.AddWithValue("@mechanicid", txtbox_mechanicid.Text)
+                cmd.Parameters.AddWithValue("@mechname", txtbox_mechname.Text)
+                cmd.Parameters.AddWithValue("@phoneno", txtbox_mech_phoneno.Text)
+                cmd.Parameters.AddWithValue("@expertise", txtbox_expertise.Text)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
+
+                Load_MechTab_Data()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'Delete Row Button: Delete selected row from Mechanics Table
+    Private Sub btn_mech_deleterow_Click(sender As Object, e As EventArgs) Handles btn_mech_deleterow.Click
+
+        'Check if any row is selected
+        If dgv_mechtab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to delete!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to delete selected row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Deleting selected row from Mechanics Table
+                cmd.CommandText = "delete from Mechanics_Table where mechanicid = @mechanicid"
+                cmd.Parameters.AddWithValue("@mechanicid", dgv_mechtab.SelectedRows(0).Cells(0).Value)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows deleted: " & rowsAffected)
+
+                Load_MechTab_Data()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'End of Mechanics Tab Code
 End Class
