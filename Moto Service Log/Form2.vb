@@ -1,9 +1,19 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class form_dashboard
 
     'Database Connection String
     Dim connectionString As String = "Data Source=HOMEDESKTOP2452\SQLEXPRESS;Initial Catalog=Moto_Service_Log;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
     Private Sub form_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Load Registration Number ComboBox in Service Assignments Tab
+        LoadServAssignRegNoComboBox()
+
+        'Load Service ID ComboBox in Service Assignments Tab
+        LoadServAssignServIDComboBox()
+
+        'Load Mechanic ID ComboBox in Service Assignments Tab
+        LoadServAssignMechIDComboBox()
 
     End Sub
 
@@ -50,7 +60,7 @@ Public Class form_dashboard
     Private Sub btn_register_Click(sender As Object, e As EventArgs) Handles btn_register.Click
 
         'Check if Registration Number is Empty or Zero and all other details are entered
-        If txtbox_regno.Text = "" Or txtbox_regno.Text = "0" Or txtbox_custname.Text = "" Or txtbox_phoneno.Text = "" Or txtbox_address.Text = "" Or txtbox_email.Text = "" Or txtbox_make.Text = "" Or txtbox_model.Text = "" Or txtbox_yearofmfd.Text = "" Then
+        If txtbox_regno.Text = "" Or txtbox_regno.Text = "0" Or txtbox_custname.Text = "" Or txtbox_phoneno.Text = "" Or txtbox_phoneno.Text.Length < 10 Or txtbox_address.Text = "" Or txtbox_email.Text = "" Or txtbox_make.Text = "" Or txtbox_model.Text = "" Or txtbox_yearofmfd.Text = "" Or txtbox_yearofmfd.Text.Length < 4 Then
             MessageBox.Show("Please enter valid Registration Number and Details!")
             Return
         Else Using conn As New SqlConnection(connectionString)
@@ -74,6 +84,7 @@ Public Class form_dashboard
                     MessageBox.Show("Rows inserted: " & rowsAffected)
 
                     Load_RegTab_Data()
+                    LoadServAssignRegNoComboBox()
 
                 Catch ex As Exception
                     MessageBox.Show("Error:" & ex.Message)
@@ -126,6 +137,7 @@ Public Class form_dashboard
                 MessageBox.Show("Rows deleted: " & rowsAffected)
 
                 Load_RegTab_Data()
+                LoadServAssignRegNoComboBox()
 
             Catch ex As Exception
                 MessageBox.Show("Error:" & ex.Message)
@@ -251,6 +263,7 @@ Public Class form_dashboard
                     MessageBox.Show("Rows inserted: " & rowsAffected)
 
                     Load_ServTab_Data()
+                    LoadServAssignServIDComboBox()
 
                 Catch ex As Exception
                     MessageBox.Show("Error:" & ex.Message)
@@ -341,6 +354,7 @@ Public Class form_dashboard
                 MessageBox.Show("Rows deleted: " & rowsAffected)
 
                 Load_ServTab_Data()
+                LoadServAssignServIDComboBox()
 
             Catch ex As Exception
                 MessageBox.Show("Error:" & ex.Message)
@@ -389,7 +403,7 @@ Public Class form_dashboard
     Private Sub btn_addmechanic_Click(sender As Object, e As EventArgs) Handles btn_addmechanic.Click
 
         'Check if Mechanic Name, Phone Number and Expertise are entered
-        If txtbox_mechname.Text = "" Or txtbox_mech_phoneno.Text = "" Or txtbox_expertise.Text = "" Then
+        If txtbox_mechname.Text = "" Or txtbox_mech_phoneno.Text = "" Or txtbox_mech_phoneno.Text.Length < 10 Or txtbox_expertise.Text = "" Then
             MessageBox.Show("Please enter valid Mechanic Name, Phone Number and Expertise!")
             Return
 
@@ -409,6 +423,7 @@ Public Class form_dashboard
                     MessageBox.Show("Rows inserted: " & rowsAffected)
 
                     Load_MechTab_Data()
+                    LoadServAssignMechIDComboBox()
 
                 Catch ex As Exception
                     MessageBox.Show("Error:" & ex.Message)
@@ -502,6 +517,7 @@ Public Class form_dashboard
                 MessageBox.Show("Rows deleted: " & rowsAffected)
 
                 Load_MechTab_Data()
+                LoadServAssignMechIDComboBox()
 
             Catch ex As Exception
                 MessageBox.Show("Error:" & ex.Message)
@@ -511,4 +527,283 @@ Public Class form_dashboard
     End Sub
 
     'End of Mechanics Tab Code
+
+    'Service Assignments Tab Code:
+
+    'Function to Load Data into DataGridView from Service Assignments Table
+    Private Sub Load_ServAssignTab_Data()
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting all details from Service Assignments Table
+                cmd.CommandText = "select * from Service_Assignments_Table"
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+
+                'Displaying details in DataGridView
+                Dim datatable1 As New DataTable()
+                datatable1.Load(datareader1)
+                dgv_servassigntab.DataSource = datatable1
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'View selected row details in Textboxes
+    Private Sub dgv_servassigntab_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_servassigntab.CellClick
+        txtbox_servassignid.Text = dgv_servassigntab.SelectedRows(0).Cells(0).Value
+        combox_assign_regno.Text = dgv_servassigntab.SelectedRows(0).Cells(1).Value
+        combox_assign_servid.Text = dgv_servassigntab.SelectedRows(0).Cells(2).Value
+        combox_assign_mechid.Text = dgv_servassigntab.SelectedRows(0).Cells(3).Value
+        DateTimePicker_assigtab.Value = dgv_servassigntab.SelectedRows(0).Cells(4).Value
+        combox_assign_status.Text = dgv_servassigntab.SelectedRows(0).Cells(5).Value
+        txtbox_assign_servcost.Text = dgv_servassigntab.SelectedRows(0).Cells(6).Value
+    End Sub
+
+    'Function to Load Registration Numbers in RegNo ComboBox in Service Assignments Tab
+    Private Sub LoadServAssignRegNoComboBox()
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting Registration Numbers from Registration Table
+                cmd.CommandText = "select regno from Registration_Table"
+
+                'Displaying Registration Numbers in ComboBox
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+                combox_assign_regno.Items.Clear()
+                While datareader1.Read()
+                    combox_assign_regno.Items.Add(datareader1("regno").ToString())
+                End While
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'Function to Load Service IDs in ServID ComboBox in Service Assignments Tab
+    Private Sub LoadServAssignServIDComboBox()
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting Service IDs from Services Table
+                cmd.CommandText = "select serviceid from Services_Table"
+
+                'Displaying Service IDs in ComboBox
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+                combox_assign_servid.Items.Clear()
+                While datareader1.Read()
+                    combox_assign_servid.Items.Add(datareader1("serviceid").ToString())
+                End While
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'Function to Load Mechanic IDs in MechID ComboBox in Service Assignments Tab
+    Private Sub LoadServAssignMechIDComboBox()
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting Mechanic IDs from Mechanics Table
+                cmd.CommandText = "select mechanicid from Mechanics_Table"
+
+                'Displaying Mechanic IDs in ComboBox
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+                combox_assign_mechid.Items.Clear()
+                While datareader1.Read()
+                    combox_assign_mechid.Items.Add(datareader1("mechanicid").ToString())
+                End While
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'Get Service Cost Button: Get Service Cost from Services Table
+    Private Sub btn_getservcost_Click(sender As Object, e As EventArgs) Handles btn_getservcost.Click
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting Service Cost from Services Table
+                cmd.CommandText = "select servcost from Services_Table where serviceid=" + combox_assign_servid.Text
+
+                'Displaying Service Cost in TextBox
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+                txtbox_assign_servcost.Clear()
+                While datareader1.Read()
+                    txtbox_assign_servcost.Text = datareader1("servcost").ToString()
+                End While
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'Assign Service Button: Assign Services to Bikes
+    Private Sub btn_assignserv_Click(sender As Object, e As EventArgs) Handles btn_assignserv.Click
+
+        'Check if all Assignment details are entered
+        If combox_assign_regno.Text = "" Or combox_assign_servid.Text = "" Or combox_assign_mechid.Text = "" Or combox_assign_status.Text = "" Or txtbox_assign_servcost.Text = "" Then
+            MessageBox.Show("Please enter valid Assignment Details!")
+            Return
+        Else Using conn As New SqlConnection(connectionString)
+                Try
+                    conn.Open()
+                    Dim cmd As New SqlCommand()
+                    cmd.Connection = conn
+
+                    'Inserting details into Service Assignments Table
+                    cmd.CommandText = "insert into Service_Assignments_Table([regno],[serviceid],[mechanicid],[servdate],[status],[servcost]) values (@regno, @serviceid, @mechanicid, @servdate, @status, @servcost)"
+                    cmd.Parameters.AddWithValue("@regno", combox_assign_regno.Text)
+                    cmd.Parameters.AddWithValue("@serviceid", combox_assign_servid.Text)
+                    cmd.Parameters.AddWithValue("@mechanicid", combox_assign_mechid.Text)
+                    cmd.Parameters.AddWithValue("@servdate", DateTimePicker_assigtab.Value)
+                    cmd.Parameters.AddWithValue("@status", combox_assign_status.Text)
+                    cmd.Parameters.AddWithValue("@servcost", txtbox_assign_servcost.Text)
+
+
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                    MessageBox.Show("Rows inserted: " & rowsAffected)
+
+                    Load_ServAssignTab_Data()
+
+                Catch ex As Exception
+                    MessageBox.Show("Error:" & ex.Message)
+                End Try
+            End Using
+        End If
+
+    End Sub
+
+    'Clear Button: Clear all Textboxes
+    Private Sub btn_assign_clear_Click(sender As Object, e As EventArgs) Handles btn_assign_clear.Click
+        combox_assign_regno.Text = ""
+        combox_assign_servid.Text = ""
+        combox_assign_mechid.Text = ""
+        combox_assign_status.Text = ""
+        txtbox_assign_servcost.Clear()
+    End Sub
+
+    'View Details Button: View all details from Service Assignments Table
+    Private Sub btn_assign_viewdetails_Click(sender As Object, e As EventArgs) Handles btn_assign_viewdetails.Click
+        Load_ServAssignTab_Data()
+    End Sub
+
+    'Edit Row Button: Edit selected row in Service Assignments Table
+    Private Sub btn_assign_editrow_Click(sender As Object, e As EventArgs) Handles btn_assign_editrow.Click
+
+        'Check if any row is selected
+        If dgv_servassigntab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        'Check if all Assignment details are entered
+        If combox_assign_regno.Text = "" Or combox_assign_servid.Text = "" Or combox_assign_mechid.Text = "" Or combox_assign_status.Text = "" Or txtbox_assign_servcost.Text = "" Then
+            MessageBox.Show("Please enter valid Assignment Details!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Updating selected row in Service Assignments Table
+                cmd.CommandText = "update Service_Assignments_Table set regno = @regno, serviceid = @serviceid, mechanicid = @mechanicid, servdate = @servdate, status = @status, servcost = @servcost where servassignid = @servassignid"
+                cmd.Parameters.AddWithValue("@servassignid", txtbox_servassignid.Text)
+                cmd.Parameters.AddWithValue("@regno", combox_assign_regno.Text)
+                cmd.Parameters.AddWithValue("@serviceid", combox_assign_servid.Text)
+                cmd.Parameters.AddWithValue("@mechanicid", combox_assign_mechid.Text)
+                cmd.Parameters.AddWithValue("@servdate", DateTimePicker_assigtab.Value)
+                cmd.Parameters.AddWithValue("@status", combox_assign_status.Text)
+                cmd.Parameters.AddWithValue("@servcost", txtbox_assign_servcost.Text)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
+
+                Load_ServAssignTab_Data()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'Delete Row Button: Delete selected row from Service Assignments Table
+    Private Sub btn_assign_deleterow_Click(sender As Object, e As EventArgs) Handles btn_assign_deleterow.Click
+
+        'Check if any row is selected
+        If dgv_servassigntab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to delete!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to delete selected row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Deleting selected row from Service Assignments Table
+                cmd.CommandText = " delete from Service_Assignments_Table where servassignid = @servassignid"
+                cmd.Parameters.AddWithValue("@servassignid", dgv_servassigntab.SelectedRows(0).Cells(0).Value)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows deleted: " & rowsAffected)
+
+                Load_ServAssignTab_Data()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'End of Service Assignments Tab Code
+
 End Class

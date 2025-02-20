@@ -742,11 +742,14 @@ Partial Class form_dashboard
         '
         'dgv_servassigntab
         '
+        Me.dgv_servassigntab.AllowUserToAddRows = False
+        Me.dgv_servassigntab.AllowUserToDeleteRows = False
         Me.dgv_servassigntab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_servassigntab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv_servassigntab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_servassigntab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_servassigntab.Name = "dgv_servassigntab"
+        Me.dgv_servassigntab.ReadOnly = True
         Me.dgv_servassigntab.RowHeadersWidth = 62
         Me.dgv_servassigntab.RowTemplate.Height = 28
         Me.dgv_servassigntab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -790,6 +793,7 @@ Partial Class form_dashboard
         'combox_assign_status
         '
         Me.combox_assign_status.FormattingEnabled = True
+        Me.combox_assign_status.Items.AddRange(New Object() {"ASSIGNED", "ONGOING", "PENDING", "COMPLETED"})
         Me.combox_assign_status.Location = New System.Drawing.Point(184, 427)
         Me.combox_assign_status.Name = "combox_assign_status"
         Me.combox_assign_status.Size = New System.Drawing.Size(250, 28)
@@ -797,10 +801,13 @@ Partial Class form_dashboard
         '
         'DateTimePicker_assigtab
         '
+        Me.DateTimePicker_assigtab.Checked = False
         Me.DateTimePicker_assigtab.Location = New System.Drawing.Point(184, 348)
+        Me.DateTimePicker_assigtab.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker_assigtab.Name = "DateTimePicker_assigtab"
         Me.DateTimePicker_assigtab.Size = New System.Drawing.Size(250, 26)
         Me.DateTimePicker_assigtab.TabIndex = 1
+        Me.DateTimePicker_assigtab.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
         '
         'btn_assign_clear
         '
@@ -967,11 +974,14 @@ Partial Class form_dashboard
         '
         'dgv_billstab
         '
+        Me.dgv_billstab.AllowUserToAddRows = False
+        Me.dgv_billstab.AllowUserToDeleteRows = False
         Me.dgv_billstab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_billstab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv_billstab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_billstab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_billstab.Name = "dgv_billstab"
+        Me.dgv_billstab.ReadOnly = True
         Me.dgv_billstab.RowHeadersWidth = 62
         Me.dgv_billstab.RowTemplate.Height = 28
         Me.dgv_billstab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -1148,6 +1158,7 @@ Partial Class form_dashboard
         Me.Controls.Add(Me.tabcontrol_dashboard)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.KeyPreview = True
+        Me.MaximizeBox = False
         Me.Name = "form_dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MSL Dashboard"
