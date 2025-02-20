@@ -1042,6 +1042,7 @@ Partial Class form_dashboard
         'combox_bills_status
         '
         Me.combox_bills_status.FormattingEnabled = True
+        Me.combox_bills_status.Items.AddRange(New Object() {"PAID", "PENDING", "EXEMPTED"})
         Me.combox_bills_status.Location = New System.Drawing.Point(184, 503)
         Me.combox_bills_status.Name = "combox_bills_status"
         Me.combox_bills_status.Size = New System.Drawing.Size(251, 28)
@@ -1050,6 +1051,7 @@ Partial Class form_dashboard
         'combox_paymode
         '
         Me.combox_paymode.FormattingEnabled = True
+        Me.combox_paymode.Items.AddRange(New Object() {"CASH", "CREDIT CARD"})
         Me.combox_paymode.Location = New System.Drawing.Point(184, 429)
         Me.combox_paymode.Name = "combox_paymode"
         Me.combox_paymode.Size = New System.Drawing.Size(251, 28)

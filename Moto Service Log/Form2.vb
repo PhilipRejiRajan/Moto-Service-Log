@@ -15,6 +15,9 @@ Public Class form_dashboard
         'Load Mechanic ID ComboBox in Service Assignments Tab
         LoadServAssignMechIDComboBox()
 
+        'Load Registration Number ComboBox in Billing Tab
+        LoadBillingRegNoComboBox()
+
     End Sub
 
     'Close Application
@@ -85,6 +88,7 @@ Public Class form_dashboard
 
                     Load_RegTab_Data()
                     LoadServAssignRegNoComboBox()
+                    LoadBillingRegNoComboBox()
 
                 Catch ex As Exception
                     MessageBox.Show("Error:" & ex.Message)
@@ -138,6 +142,7 @@ Public Class form_dashboard
 
                 Load_RegTab_Data()
                 LoadServAssignRegNoComboBox()
+                LoadBillingRegNoComboBox()
 
             Catch ex As Exception
                 MessageBox.Show("Error:" & ex.Message)
@@ -805,5 +810,234 @@ Public Class form_dashboard
     End Sub
 
     'End of Service Assignments Tab Code
+
+    'Billing Tab Code:
+
+    'Function to Load Data into DataGridView from Billing Table
+    Private Sub Load_BillingTab_Data()
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting all details from Billing Table
+                cmd.CommandText = "select * from Billing_Table"
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+
+                'Displaying details in DataGridView
+                Dim datatable1 As New DataTable()
+                datatable1.Load(datareader1)
+                dgv_billstab.DataSource = datatable1
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'View selected row details in Textboxes
+    Private Sub dgv_billstab_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_billstab.CellClick
+        txtbox_billid.Text = dgv_billstab.SelectedRows(0).Cells(0).Value
+        combox_bills_regno.Text = dgv_billstab.SelectedRows(0).Cells(1).Value
+        DateTimePicker_billstab.Value = dgv_billstab.SelectedRows(0).Cells(2).Value
+        txtbox_totalamt.Text = dgv_billstab.SelectedRows(0).Cells(3).Value
+        combox_paymode.Text = dgv_billstab.SelectedRows(0).Cells(4).Value
+        combox_bills_status.Text = dgv_billstab.SelectedRows(0).Cells(5).Value
+    End Sub
+
+    'Function to Load Registration Numbers in RegNo ComboBox in Billing Tab
+    Private Sub LoadBillingRegNoComboBox()
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selecting Registration Numbers from Registration Table
+                cmd.CommandText = "select regno from Registration_Table"
+
+                'Displaying Registration Numbers in ComboBox
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+                combox_bills_regno.Items.Clear()
+                While datareader1.Read()
+                    combox_bills_regno.Items.Add(datareader1("regno").ToString())
+                End While
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'Calculate Total Amount Button: to calculate total service amount of one bike
+    Private Sub btn_totalamt_Click(sender As Object, e As EventArgs) Handles btn_totalamt.Click
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Selects sum of service costs of all services done on a bike
+                cmd.CommandText = "select sum(servcost) as totalamount from Service_Assignments_Table where regno=" + combox_bills_regno.Text
+
+                'Displaying Total Amount in TextBox
+                Dim datareader1 As SqlDataReader = cmd.ExecuteReader()
+                txtbox_totalamt.Clear()
+                While datareader1.Read()
+                    txtbox_totalamt.Text = datareader1("totalamount").ToString()
+                End While
+                datareader1.Close()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+
+    End Sub
+
+    'Add Bill Button: Add Bill for a Bike
+    Private Sub btn_addbill_Click(sender As Object, e As EventArgs) Handles btn_addbill.Click
+
+        'Check if all Bill details are entered
+        If combox_bills_regno.Text = "" Or txtbox_totalamt.Text = "" Or combox_paymode.Text = "" Or combox_bills_status.Text = "" Then
+            MessageBox.Show("Please enter valid Bill Details!")
+            Return
+        Else Using conn As New SqlConnection(connectionString)
+                Try
+                    conn.Open()
+                    Dim cmd As New SqlCommand()
+                    cmd.Connection = conn
+
+                    'Inserting details into Billing Table
+                    cmd.CommandText = "insert into Billing_Table([regno],[billdate],[totalamount],[paymentmode],[status]) values (@regno, @billdate, @totalamount, @paymentmode, @status)"
+                    cmd.Parameters.AddWithValue("@regno", combox_bills_regno.Text)
+                    cmd.Parameters.AddWithValue("@billdate", DateTimePicker_billstab.Value)
+                    cmd.Parameters.AddWithValue("@totalamount", txtbox_totalamt.Text)
+                    cmd.Parameters.AddWithValue("@paymentmode", combox_paymode.Text)
+                    cmd.Parameters.AddWithValue("@status", combox_bills_status.Text)
+
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                    MessageBox.Show("Rows inserted: " & rowsAffected)
+
+                    Load_BillingTab_Data()
+
+                Catch ex As Exception
+                    MessageBox.Show("Error:" & ex.Message)
+                End Try
+            End Using
+        End If
+
+    End Sub
+
+    'Clear Button: Clear all Textboxes
+    Private Sub btn_bills_clear_Click(sender As Object, e As EventArgs) Handles btn_bills_clear.Click
+        txtbox_billid.Clear()
+        combox_bills_regno.Text = ""
+        txtbox_totalamt.Clear()
+        combox_paymode.Text = ""
+        combox_bills_status.Text = ""
+    End Sub
+
+    'View Details Button: View all details from Billing Table
+    Private Sub btn_bills_viewdetails_Click(sender As Object, e As EventArgs) Handles btn_bills_viewdetails.Click
+        Load_BillingTab_Data()
+    End Sub
+
+    'Edit Row Button: Edit selected row in Billing Table
+    Private Sub btn_bills_editrow_Click(sender As Object, e As EventArgs) Handles btn_bills_editrow.Click
+
+        'Check if any row is selected
+        If dgv_billstab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to edit!")
+            Return
+        End If
+
+        'Check if all Bill details are entered
+        If combox_bills_regno.Text = "" Or txtbox_totalamt.Text = "" Or combox_paymode.Text = "" Or combox_bills_status.Text = "" Then
+            MessageBox.Show("Please enter valid Bill Details!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to edit selected row?", "Confirm Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+                'Updating selected row in Billing Table
+                cmd.CommandText = "update Billing_Table set regno = @regno, billdate = @billdate, totalamount = @totalamount, paymentmode = @paymentmode, status = @status where billid = @billid"
+                cmd.Parameters.AddWithValue("@billid", txtbox_billid.Text)
+                cmd.Parameters.AddWithValue("@regno", combox_bills_regno.Text)
+                cmd.Parameters.AddWithValue("@billdate", DateTimePicker_billstab.Value)
+                cmd.Parameters.AddWithValue("@totalamount", txtbox_totalamt.Text)
+                cmd.Parameters.AddWithValue("@paymentmode", combox_paymode.Text)
+                cmd.Parameters.AddWithValue("@status", combox_bills_status.Text)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows updated: " & rowsAffected)
+
+                Load_BillingTab_Data()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'Delete Row Button: Delete selected row from Billing Table
+    Private Sub btn_bills_deleterow_Click(sender As Object, e As EventArgs) Handles btn_bills_deleterow.Click
+
+        'Check if any row is selected
+        If dgv_billstab.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a row to delete!")
+            Return
+        End If
+
+        If MessageBox.Show("Are you sure you want to delete selected row?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Return
+        End If
+
+        Using conn As New SqlConnection(connectionString)
+            Try
+                conn.Open()
+                Dim cmd As New SqlCommand()
+                cmd.Connection = conn
+
+                'Deleting selected row from Billing Table
+                cmd.CommandText = "delete from Billing_Table where billid = @billid"
+                cmd.Parameters.AddWithValue("@billid", dgv_billstab.SelectedRows(0).Cells(0).Value)
+
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                MessageBox.Show("Rows deleted: " & rowsAffected)
+
+                Load_BillingTab_Data()
+
+            Catch ex As Exception
+                MessageBox.Show("Error:" & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    'Generate Invoice Button: Generate Invoice for a Bike
+    Private Sub btn_gen_invoice_Click(sender As Object, e As EventArgs) Handles btn_gen_invoice.Click
+        openInvoice()
+    End Sub
+
+    'Open Invoice Form
+    Private Sub openInvoice()
+        Dim secondForm As New form_Invoice()
+        secondForm.Show()
+        Me.Hide()
+    End Sub
+
+    'End of Billing Tab Code
 
 End Class
