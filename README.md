@@ -16,3 +16,14 @@ It is designed to reduce manual record keeping and tracking of customer registra
 
 # Screenshots
 
+<p align="center">
+  <img src="/MSL Screenshots/MSL 01.png"/>
+</p>
+
+<p align="center">
+  <img src="/MSL Screenshots/MSL 02.png"/>
+</p>
+
+<p align="center">
+  <img src="/MSL Screenshots/MSL 03.png"/>
+</p>
