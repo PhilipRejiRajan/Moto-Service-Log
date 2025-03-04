@@ -22,6 +22,7 @@ Partial Class form_dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form_dashboard))
         Me.tabcontrol_dashboard = New System.Windows.Forms.TabControl()
         Me.TabPage_Reg = New System.Windows.Forms.TabPage()
         Me.btn_reg_editrow = New System.Windows.Forms.Button()
@@ -122,6 +123,7 @@ Partial Class form_dashboard
         Me.lbl_billdate = New System.Windows.Forms.Label()
         Me.lbl_bills_regno = New System.Windows.Forms.Label()
         Me.lbl_billid = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tabcontrol_dashboard.SuspendLayout()
         Me.TabPage_Reg.SuspendLayout()
         CType(Me.dgv_regtab, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -138,6 +140,7 @@ Partial Class form_dashboard
         Me.TabPage_Bills.SuspendLayout()
         CType(Me.dgv_billstab, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel_billstab.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabcontrol_dashboard
@@ -147,8 +150,9 @@ Partial Class form_dashboard
         Me.tabcontrol_dashboard.Controls.Add(Me.TabPage_Mech)
         Me.tabcontrol_dashboard.Controls.Add(Me.TabPage_Assig)
         Me.tabcontrol_dashboard.Controls.Add(Me.TabPage_Bills)
-        Me.tabcontrol_dashboard.ItemSize = New System.Drawing.Size(200, 55)
-        Me.tabcontrol_dashboard.Location = New System.Drawing.Point(12, 12)
+        Me.tabcontrol_dashboard.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tabcontrol_dashboard.ItemSize = New System.Drawing.Size(250, 60)
+        Me.tabcontrol_dashboard.Location = New System.Drawing.Point(12, 188)
         Me.tabcontrol_dashboard.Multiline = True
         Me.tabcontrol_dashboard.Name = "tabcontrol_dashboard"
         Me.tabcontrol_dashboard.SelectedIndex = 0
@@ -164,10 +168,10 @@ Partial Class form_dashboard
         Me.TabPage_Reg.Controls.Add(Me.btn_reg_viewdetails)
         Me.TabPage_Reg.Controls.Add(Me.dgv_regtab)
         Me.TabPage_Reg.Controls.Add(Me.panel_regtab)
-        Me.TabPage_Reg.Location = New System.Drawing.Point(4, 59)
+        Me.TabPage_Reg.Location = New System.Drawing.Point(4, 64)
         Me.TabPage_Reg.Name = "TabPage_Reg"
         Me.TabPage_Reg.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_Reg.Size = New System.Drawing.Size(1785, 875)
+        Me.TabPage_Reg.Size = New System.Drawing.Size(1785, 870)
         Me.TabPage_Reg.TabIndex = 0
         Me.TabPage_Reg.Text = "Registration"
         Me.TabPage_Reg.UseVisualStyleBackColor = True
@@ -263,36 +267,36 @@ Partial Class form_dashboard
         '
         'txtbox_yearofmfd
         '
-        Me.txtbox_yearofmfd.Location = New System.Drawing.Point(184, 575)
+        Me.txtbox_yearofmfd.Location = New System.Drawing.Point(256, 575)
         Me.txtbox_yearofmfd.MaxLength = 4
         Me.txtbox_yearofmfd.Name = "txtbox_yearofmfd"
-        Me.txtbox_yearofmfd.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_yearofmfd.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_yearofmfd.TabIndex = 15
         '
         'txtbox_model
         '
-        Me.txtbox_model.Location = New System.Drawing.Point(184, 520)
+        Me.txtbox_model.Location = New System.Drawing.Point(256, 520)
         Me.txtbox_model.Name = "txtbox_model"
-        Me.txtbox_model.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_model.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_model.TabIndex = 14
         '
         'txtbox_make
         '
-        Me.txtbox_make.Location = New System.Drawing.Point(184, 453)
+        Me.txtbox_make.Location = New System.Drawing.Point(256, 453)
         Me.txtbox_make.Name = "txtbox_make"
-        Me.txtbox_make.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_make.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_make.TabIndex = 13
         '
         'txtbox_email
         '
-        Me.txtbox_email.Location = New System.Drawing.Point(184, 389)
+        Me.txtbox_email.Location = New System.Drawing.Point(256, 389)
         Me.txtbox_email.Name = "txtbox_email"
-        Me.txtbox_email.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_email.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_email.TabIndex = 12
         '
         'txtbox_address
         '
-        Me.txtbox_address.Location = New System.Drawing.Point(184, 249)
+        Me.txtbox_address.Location = New System.Drawing.Point(256, 249)
         Me.txtbox_address.Multiline = True
         Me.txtbox_address.Name = "txtbox_address"
         Me.txtbox_address.Size = New System.Drawing.Size(254, 105)
@@ -300,25 +304,25 @@ Partial Class form_dashboard
         '
         'txtbox_phoneno
         '
-        Me.txtbox_phoneno.Location = New System.Drawing.Point(184, 178)
+        Me.txtbox_phoneno.Location = New System.Drawing.Point(256, 178)
         Me.txtbox_phoneno.MaxLength = 10
         Me.txtbox_phoneno.Name = "txtbox_phoneno"
-        Me.txtbox_phoneno.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_phoneno.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_phoneno.TabIndex = 10
         '
         'txtbox_custname
         '
-        Me.txtbox_custname.Location = New System.Drawing.Point(184, 110)
+        Me.txtbox_custname.Location = New System.Drawing.Point(256, 110)
         Me.txtbox_custname.Name = "txtbox_custname"
-        Me.txtbox_custname.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_custname.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_custname.TabIndex = 9
         '
         'txtbox_regno
         '
         Me.txtbox_regno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtbox_regno.Location = New System.Drawing.Point(184, 44)
+        Me.txtbox_regno.Location = New System.Drawing.Point(256, 44)
         Me.txtbox_regno.Name = "txtbox_regno"
-        Me.txtbox_regno.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_regno.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_regno.TabIndex = 8
         '
         'lbl_yearofmfd
@@ -326,7 +330,7 @@ Partial Class form_dashboard
         Me.lbl_yearofmfd.AutoSize = True
         Me.lbl_yearofmfd.Location = New System.Drawing.Point(26, 575)
         Me.lbl_yearofmfd.Name = "lbl_yearofmfd"
-        Me.lbl_yearofmfd.Size = New System.Drawing.Size(99, 20)
+        Me.lbl_yearofmfd.Size = New System.Drawing.Size(175, 29)
         Me.lbl_yearofmfd.TabIndex = 7
         Me.lbl_yearofmfd.Text = "Year Of Mfd:"
         '
@@ -335,7 +339,7 @@ Partial Class form_dashboard
         Me.lbl_model.AutoSize = True
         Me.lbl_model.Location = New System.Drawing.Point(26, 520)
         Me.lbl_model.Name = "lbl_model"
-        Me.lbl_model.Size = New System.Drawing.Size(56, 20)
+        Me.lbl_model.Size = New System.Drawing.Size(100, 29)
         Me.lbl_model.TabIndex = 6
         Me.lbl_model.Text = "Model:"
         '
@@ -344,7 +348,7 @@ Partial Class form_dashboard
         Me.lbl_make.AutoSize = True
         Me.lbl_make.Location = New System.Drawing.Point(26, 453)
         Me.lbl_make.Name = "lbl_make"
-        Me.lbl_make.Size = New System.Drawing.Size(52, 20)
+        Me.lbl_make.Size = New System.Drawing.Size(91, 29)
         Me.lbl_make.TabIndex = 5
         Me.lbl_make.Text = "Make:"
         '
@@ -353,7 +357,7 @@ Partial Class form_dashboard
         Me.lbl_email.AutoSize = True
         Me.lbl_email.Location = New System.Drawing.Point(26, 389)
         Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(52, 20)
+        Me.lbl_email.Size = New System.Drawing.Size(94, 29)
         Me.lbl_email.TabIndex = 4
         Me.lbl_email.Text = "Email:"
         '
@@ -362,7 +366,7 @@ Partial Class form_dashboard
         Me.lbl_address.AutoSize = True
         Me.lbl_address.Location = New System.Drawing.Point(26, 249)
         Me.lbl_address.Name = "lbl_address"
-        Me.lbl_address.Size = New System.Drawing.Size(72, 20)
+        Me.lbl_address.Size = New System.Drawing.Size(128, 29)
         Me.lbl_address.TabIndex = 3
         Me.lbl_address.Text = "Address:"
         '
@@ -371,7 +375,7 @@ Partial Class form_dashboard
         Me.lbl_phoneno.AutoSize = True
         Me.lbl_phoneno.Location = New System.Drawing.Point(26, 178)
         Me.lbl_phoneno.Name = "lbl_phoneno"
-        Me.lbl_phoneno.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_phoneno.Size = New System.Drawing.Size(147, 29)
         Me.lbl_phoneno.TabIndex = 2
         Me.lbl_phoneno.Text = "Phone No:"
         '
@@ -380,7 +384,7 @@ Partial Class form_dashboard
         Me.lbl_custname.AutoSize = True
         Me.lbl_custname.Location = New System.Drawing.Point(26, 110)
         Me.lbl_custname.Name = "lbl_custname"
-        Me.lbl_custname.Size = New System.Drawing.Size(128, 20)
+        Me.lbl_custname.Size = New System.Drawing.Size(231, 29)
         Me.lbl_custname.TabIndex = 1
         Me.lbl_custname.Text = "Customer Name:"
         '
@@ -389,7 +393,7 @@ Partial Class form_dashboard
         Me.lbl_regno.AutoSize = True
         Me.lbl_regno.Location = New System.Drawing.Point(26, 44)
         Me.lbl_regno.Name = "lbl_regno"
-        Me.lbl_regno.Size = New System.Drawing.Size(123, 20)
+        Me.lbl_regno.Size = New System.Drawing.Size(224, 29)
         Me.lbl_regno.TabIndex = 0
         Me.lbl_regno.Text = "Registration No:"
         '
@@ -401,10 +405,10 @@ Partial Class form_dashboard
         Me.TabPage_Serv.Controls.Add(Me.btn_serv_viewdetails)
         Me.TabPage_Serv.Controls.Add(Me.dgv_servtab)
         Me.TabPage_Serv.Controls.Add(Me.panel_servtab)
-        Me.TabPage_Serv.Location = New System.Drawing.Point(4, 59)
+        Me.TabPage_Serv.Location = New System.Drawing.Point(4, 74)
         Me.TabPage_Serv.Name = "TabPage_Serv"
         Me.TabPage_Serv.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_Serv.Size = New System.Drawing.Size(1785, 875)
+        Me.TabPage_Serv.Size = New System.Drawing.Size(1785, 860)
         Me.TabPage_Serv.TabIndex = 1
         Me.TabPage_Serv.Text = "Services"
         Me.TabPage_Serv.UseVisualStyleBackColor = True
@@ -490,24 +494,24 @@ Partial Class form_dashboard
         '
         'txtbox_servcost
         '
-        Me.txtbox_servcost.Location = New System.Drawing.Point(184, 193)
+        Me.txtbox_servcost.Location = New System.Drawing.Point(235, 193)
         Me.txtbox_servcost.Name = "txtbox_servcost"
-        Me.txtbox_servcost.Size = New System.Drawing.Size(243, 26)
+        Me.txtbox_servcost.Size = New System.Drawing.Size(243, 37)
         Me.txtbox_servcost.TabIndex = 4
         '
         'txtbox_servname
         '
-        Me.txtbox_servname.Location = New System.Drawing.Point(184, 116)
+        Me.txtbox_servname.Location = New System.Drawing.Point(235, 116)
         Me.txtbox_servname.Name = "txtbox_servname"
-        Me.txtbox_servname.Size = New System.Drawing.Size(243, 26)
+        Me.txtbox_servname.Size = New System.Drawing.Size(243, 37)
         Me.txtbox_servname.TabIndex = 3
         '
         'txtbox_serviceid
         '
-        Me.txtbox_serviceid.Location = New System.Drawing.Point(184, 44)
+        Me.txtbox_serviceid.Location = New System.Drawing.Point(235, 44)
         Me.txtbox_serviceid.Name = "txtbox_serviceid"
         Me.txtbox_serviceid.ReadOnly = True
-        Me.txtbox_serviceid.Size = New System.Drawing.Size(243, 26)
+        Me.txtbox_serviceid.Size = New System.Drawing.Size(243, 37)
         Me.txtbox_serviceid.TabIndex = 1
         '
         'lbl_servcost
@@ -515,7 +519,7 @@ Partial Class form_dashboard
         Me.lbl_servcost.AutoSize = True
         Me.lbl_servcost.Location = New System.Drawing.Point(26, 193)
         Me.lbl_servcost.Name = "lbl_servcost"
-        Me.lbl_servcost.Size = New System.Drawing.Size(102, 20)
+        Me.lbl_servcost.Size = New System.Drawing.Size(186, 29)
         Me.lbl_servcost.TabIndex = 2
         Me.lbl_servcost.Text = "Service Cost:"
         '
@@ -524,7 +528,7 @@ Partial Class form_dashboard
         Me.lbl_servname.AutoSize = True
         Me.lbl_servname.Location = New System.Drawing.Point(26, 116)
         Me.lbl_servname.Name = "lbl_servname"
-        Me.lbl_servname.Size = New System.Drawing.Size(111, 20)
+        Me.lbl_servname.Size = New System.Drawing.Size(201, 29)
         Me.lbl_servname.TabIndex = 1
         Me.lbl_servname.Text = "Service Name:"
         '
@@ -533,7 +537,7 @@ Partial Class form_dashboard
         Me.lbl_serviceid.AutoSize = True
         Me.lbl_serviceid.Location = New System.Drawing.Point(26, 44)
         Me.lbl_serviceid.Name = "lbl_serviceid"
-        Me.lbl_serviceid.Size = New System.Drawing.Size(86, 20)
+        Me.lbl_serviceid.Size = New System.Drawing.Size(159, 29)
         Me.lbl_serviceid.TabIndex = 0
         Me.lbl_serviceid.Text = "Service ID:"
         '
@@ -545,9 +549,9 @@ Partial Class form_dashboard
         Me.TabPage_Mech.Controls.Add(Me.btn_mech_viewdetails)
         Me.TabPage_Mech.Controls.Add(Me.dgv_mechtab)
         Me.TabPage_Mech.Controls.Add(Me.panel_mechtab)
-        Me.TabPage_Mech.Location = New System.Drawing.Point(4, 59)
+        Me.TabPage_Mech.Location = New System.Drawing.Point(4, 74)
         Me.TabPage_Mech.Name = "TabPage_Mech"
-        Me.TabPage_Mech.Size = New System.Drawing.Size(1785, 875)
+        Me.TabPage_Mech.Size = New System.Drawing.Size(1785, 860)
         Me.TabPage_Mech.TabIndex = 2
         Me.TabPage_Mech.Text = "Mechanics"
         Me.TabPage_Mech.UseVisualStyleBackColor = True
@@ -633,7 +637,7 @@ Partial Class form_dashboard
         '
         'txtbox_expertise
         '
-        Me.txtbox_expertise.Location = New System.Drawing.Point(184, 268)
+        Me.txtbox_expertise.Location = New System.Drawing.Point(258, 265)
         Me.txtbox_expertise.Multiline = True
         Me.txtbox_expertise.Name = "txtbox_expertise"
         Me.txtbox_expertise.Size = New System.Drawing.Size(247, 105)
@@ -641,25 +645,25 @@ Partial Class form_dashboard
         '
         'txtbox_mech_phoneno
         '
-        Me.txtbox_mech_phoneno.Location = New System.Drawing.Point(184, 195)
+        Me.txtbox_mech_phoneno.Location = New System.Drawing.Point(258, 192)
         Me.txtbox_mech_phoneno.MaxLength = 10
         Me.txtbox_mech_phoneno.Name = "txtbox_mech_phoneno"
-        Me.txtbox_mech_phoneno.Size = New System.Drawing.Size(247, 26)
+        Me.txtbox_mech_phoneno.Size = New System.Drawing.Size(247, 37)
         Me.txtbox_mech_phoneno.TabIndex = 6
         '
         'txtbox_mechname
         '
-        Me.txtbox_mechname.Location = New System.Drawing.Point(184, 117)
+        Me.txtbox_mechname.Location = New System.Drawing.Point(258, 114)
         Me.txtbox_mechname.Name = "txtbox_mechname"
-        Me.txtbox_mechname.Size = New System.Drawing.Size(247, 26)
+        Me.txtbox_mechname.Size = New System.Drawing.Size(247, 37)
         Me.txtbox_mechname.TabIndex = 5
         '
         'txtbox_mechanicid
         '
-        Me.txtbox_mechanicid.Location = New System.Drawing.Point(184, 44)
+        Me.txtbox_mechanicid.Location = New System.Drawing.Point(258, 41)
         Me.txtbox_mechanicid.Name = "txtbox_mechanicid"
         Me.txtbox_mechanicid.ReadOnly = True
-        Me.txtbox_mechanicid.Size = New System.Drawing.Size(247, 26)
+        Me.txtbox_mechanicid.Size = New System.Drawing.Size(247, 37)
         Me.txtbox_mechanicid.TabIndex = 4
         '
         'lbl_expertise
@@ -667,7 +671,7 @@ Partial Class form_dashboard
         Me.lbl_expertise.AutoSize = True
         Me.lbl_expertise.Location = New System.Drawing.Point(26, 268)
         Me.lbl_expertise.Name = "lbl_expertise"
-        Me.lbl_expertise.Size = New System.Drawing.Size(79, 20)
+        Me.lbl_expertise.Size = New System.Drawing.Size(144, 29)
         Me.lbl_expertise.TabIndex = 3
         Me.lbl_expertise.Text = "Expertise:"
         '
@@ -676,7 +680,7 @@ Partial Class form_dashboard
         Me.lbl_mech_phoneno.AutoSize = True
         Me.lbl_mech_phoneno.Location = New System.Drawing.Point(26, 195)
         Me.lbl_mech_phoneno.Name = "lbl_mech_phoneno"
-        Me.lbl_mech_phoneno.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_mech_phoneno.Size = New System.Drawing.Size(147, 29)
         Me.lbl_mech_phoneno.TabIndex = 2
         Me.lbl_mech_phoneno.Text = "Phone No:"
         '
@@ -685,7 +689,7 @@ Partial Class form_dashboard
         Me.lbl_mechname.AutoSize = True
         Me.lbl_mechname.Location = New System.Drawing.Point(26, 117)
         Me.lbl_mechname.Name = "lbl_mechname"
-        Me.lbl_mechname.Size = New System.Drawing.Size(127, 20)
+        Me.lbl_mechname.Size = New System.Drawing.Size(225, 29)
         Me.lbl_mechname.TabIndex = 1
         Me.lbl_mechname.Text = "Mechanic Name:"
         '
@@ -694,7 +698,7 @@ Partial Class form_dashboard
         Me.lbl_mechanicid.AutoSize = True
         Me.lbl_mechanicid.Location = New System.Drawing.Point(26, 44)
         Me.lbl_mechanicid.Name = "lbl_mechanicid"
-        Me.lbl_mechanicid.Size = New System.Drawing.Size(102, 20)
+        Me.lbl_mechanicid.Size = New System.Drawing.Size(183, 29)
         Me.lbl_mechanicid.TabIndex = 0
         Me.lbl_mechanicid.Text = "Mechanic ID:"
         '
@@ -706,9 +710,9 @@ Partial Class form_dashboard
         Me.TabPage_Assig.Controls.Add(Me.btn_assign_viewdetails)
         Me.TabPage_Assig.Controls.Add(Me.dgv_servassigntab)
         Me.TabPage_Assig.Controls.Add(Me.panel_assigtab)
-        Me.TabPage_Assig.Location = New System.Drawing.Point(4, 59)
+        Me.TabPage_Assig.Location = New System.Drawing.Point(4, 74)
         Me.TabPage_Assig.Name = "TabPage_Assig"
-        Me.TabPage_Assig.Size = New System.Drawing.Size(1785, 875)
+        Me.TabPage_Assig.Size = New System.Drawing.Size(1785, 860)
         Me.TabPage_Assig.TabIndex = 3
         Me.TabPage_Assig.Text = "Service Assignments"
         Me.TabPage_Assig.UseVisualStyleBackColor = True
@@ -783,7 +787,7 @@ Partial Class form_dashboard
         '
         'btn_getservcost
         '
-        Me.btn_getservcost.Location = New System.Drawing.Point(317, 557)
+        Me.btn_getservcost.Location = New System.Drawing.Point(315, 603)
         Me.btn_getservcost.Name = "btn_getservcost"
         Me.btn_getservcost.Size = New System.Drawing.Size(229, 49)
         Me.btn_getservcost.TabIndex = 17
@@ -794,18 +798,18 @@ Partial Class form_dashboard
         '
         Me.combox_assign_status.FormattingEnabled = True
         Me.combox_assign_status.Items.AddRange(New Object() {"ASSIGNED", "ONGOING", "PENDING", "COMPLETED"})
-        Me.combox_assign_status.Location = New System.Drawing.Point(184, 427)
+        Me.combox_assign_status.Location = New System.Drawing.Point(275, 473)
         Me.combox_assign_status.Name = "combox_assign_status"
-        Me.combox_assign_status.Size = New System.Drawing.Size(250, 28)
+        Me.combox_assign_status.Size = New System.Drawing.Size(250, 37)
         Me.combox_assign_status.TabIndex = 16
         '
         'DateTimePicker_assigtab
         '
         Me.DateTimePicker_assigtab.Checked = False
-        Me.DateTimePicker_assigtab.Location = New System.Drawing.Point(184, 348)
+        Me.DateTimePicker_assigtab.Location = New System.Drawing.Point(275, 394)
         Me.DateTimePicker_assigtab.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker_assigtab.Name = "DateTimePicker_assigtab"
-        Me.DateTimePicker_assigtab.Size = New System.Drawing.Size(250, 26)
+        Me.DateTimePicker_assigtab.Size = New System.Drawing.Size(250, 37)
         Me.DateTimePicker_assigtab.TabIndex = 1
         Me.DateTimePicker_assigtab.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
         '
@@ -829,95 +833,95 @@ Partial Class form_dashboard
         '
         'txtbox_assign_servcost
         '
-        Me.txtbox_assign_servcost.Location = New System.Drawing.Point(30, 568)
+        Me.txtbox_assign_servcost.Location = New System.Drawing.Point(29, 603)
         Me.txtbox_assign_servcost.Name = "txtbox_assign_servcost"
         Me.txtbox_assign_servcost.ReadOnly = True
-        Me.txtbox_assign_servcost.Size = New System.Drawing.Size(250, 26)
+        Me.txtbox_assign_servcost.Size = New System.Drawing.Size(250, 37)
         Me.txtbox_assign_servcost.TabIndex = 13
         '
         'combox_assign_mechid
         '
         Me.combox_assign_mechid.FormattingEnabled = True
-        Me.combox_assign_mechid.Location = New System.Drawing.Point(184, 269)
+        Me.combox_assign_mechid.Location = New System.Drawing.Point(275, 315)
         Me.combox_assign_mechid.Name = "combox_assign_mechid"
-        Me.combox_assign_mechid.Size = New System.Drawing.Size(250, 28)
+        Me.combox_assign_mechid.Size = New System.Drawing.Size(250, 37)
         Me.combox_assign_mechid.TabIndex = 10
         '
         'combox_assign_servid
         '
         Me.combox_assign_servid.FormattingEnabled = True
-        Me.combox_assign_servid.Location = New System.Drawing.Point(184, 194)
+        Me.combox_assign_servid.Location = New System.Drawing.Point(275, 240)
         Me.combox_assign_servid.Name = "combox_assign_servid"
-        Me.combox_assign_servid.Size = New System.Drawing.Size(250, 28)
+        Me.combox_assign_servid.Size = New System.Drawing.Size(250, 37)
         Me.combox_assign_servid.TabIndex = 9
         '
         'combox_assign_regno
         '
         Me.combox_assign_regno.FormattingEnabled = True
-        Me.combox_assign_regno.Location = New System.Drawing.Point(184, 117)
+        Me.combox_assign_regno.Location = New System.Drawing.Point(275, 163)
         Me.combox_assign_regno.Name = "combox_assign_regno"
-        Me.combox_assign_regno.Size = New System.Drawing.Size(250, 28)
+        Me.combox_assign_regno.Size = New System.Drawing.Size(250, 37)
         Me.combox_assign_regno.TabIndex = 8
         '
         'txtbox_servassignid
         '
-        Me.txtbox_servassignid.Location = New System.Drawing.Point(188, 44)
+        Me.txtbox_servassignid.Location = New System.Drawing.Point(29, 89)
         Me.txtbox_servassignid.Name = "txtbox_servassignid"
         Me.txtbox_servassignid.ReadOnly = True
-        Me.txtbox_servassignid.Size = New System.Drawing.Size(250, 26)
+        Me.txtbox_servassignid.Size = New System.Drawing.Size(250, 37)
         Me.txtbox_servassignid.TabIndex = 7
         '
         'lbl_assign_servcost
         '
         Me.lbl_assign_servcost.AutoSize = True
-        Me.lbl_assign_servcost.Location = New System.Drawing.Point(26, 505)
+        Me.lbl_assign_servcost.Location = New System.Drawing.Point(24, 551)
         Me.lbl_assign_servcost.Name = "lbl_assign_servcost"
-        Me.lbl_assign_servcost.Size = New System.Drawing.Size(102, 20)
+        Me.lbl_assign_servcost.Size = New System.Drawing.Size(186, 29)
         Me.lbl_assign_servcost.TabIndex = 6
         Me.lbl_assign_servcost.Text = "Service Cost:"
         '
         'lbl_servstatus
         '
         Me.lbl_servstatus.AutoSize = True
-        Me.lbl_servstatus.Location = New System.Drawing.Point(26, 430)
+        Me.lbl_servstatus.Location = New System.Drawing.Point(24, 476)
         Me.lbl_servstatus.Name = "lbl_servstatus"
-        Me.lbl_servstatus.Size = New System.Drawing.Size(60, 20)
+        Me.lbl_servstatus.Size = New System.Drawing.Size(107, 29)
         Me.lbl_servstatus.TabIndex = 5
         Me.lbl_servstatus.Text = "Status:"
         '
         'lbl_servdate
         '
         Me.lbl_servdate.AutoSize = True
-        Me.lbl_servdate.Location = New System.Drawing.Point(26, 348)
+        Me.lbl_servdate.Location = New System.Drawing.Point(24, 394)
         Me.lbl_servdate.Name = "lbl_servdate"
-        Me.lbl_servdate.Size = New System.Drawing.Size(104, 20)
+        Me.lbl_servdate.Size = New System.Drawing.Size(188, 29)
         Me.lbl_servdate.TabIndex = 4
         Me.lbl_servdate.Text = "Service Date:"
         '
         'lbl_assign_mechanicid
         '
         Me.lbl_assign_mechanicid.AutoSize = True
-        Me.lbl_assign_mechanicid.Location = New System.Drawing.Point(26, 269)
+        Me.lbl_assign_mechanicid.Location = New System.Drawing.Point(24, 315)
         Me.lbl_assign_mechanicid.Name = "lbl_assign_mechanicid"
-        Me.lbl_assign_mechanicid.Size = New System.Drawing.Size(102, 20)
+        Me.lbl_assign_mechanicid.Size = New System.Drawing.Size(183, 29)
         Me.lbl_assign_mechanicid.TabIndex = 3
         Me.lbl_assign_mechanicid.Text = "Mechanic ID:"
         '
         'lbl_assign_serviceid
         '
         Me.lbl_assign_serviceid.AutoSize = True
-        Me.lbl_assign_serviceid.Location = New System.Drawing.Point(26, 194)
+        Me.lbl_assign_serviceid.Location = New System.Drawing.Point(24, 240)
         Me.lbl_assign_serviceid.Name = "lbl_assign_serviceid"
-        Me.lbl_assign_serviceid.Size = New System.Drawing.Size(86, 20)
+        Me.lbl_assign_serviceid.Size = New System.Drawing.Size(159, 29)
         Me.lbl_assign_serviceid.TabIndex = 2
         Me.lbl_assign_serviceid.Text = "Service ID:"
         '
         'lbl_assign_regno
         '
         Me.lbl_assign_regno.AutoSize = True
-        Me.lbl_assign_regno.Location = New System.Drawing.Point(26, 117)
+        Me.lbl_assign_regno.Location = New System.Drawing.Point(24, 163)
         Me.lbl_assign_regno.Name = "lbl_assign_regno"
-        Me.lbl_assign_regno.Size = New System.Drawing.Size(123, 20)
+        Me.lbl_assign_regno.Size = New System.Drawing.Size(224, 29)
         Me.lbl_assign_regno.TabIndex = 1
         Me.lbl_assign_regno.Text = "Registration No:"
         '
@@ -926,7 +930,7 @@ Partial Class form_dashboard
         Me.lbl_servassignid.AutoSize = True
         Me.lbl_servassignid.Location = New System.Drawing.Point(8, 44)
         Me.lbl_servassignid.Name = "lbl_servassignid"
-        Me.lbl_servassignid.Size = New System.Drawing.Size(174, 20)
+        Me.lbl_servassignid.Size = New System.Drawing.Size(317, 29)
         Me.lbl_servassignid.TabIndex = 0
         Me.lbl_servassignid.Text = "Service Assignment ID:"
         '
@@ -938,9 +942,9 @@ Partial Class form_dashboard
         Me.TabPage_Bills.Controls.Add(Me.btn_bills_viewdetails)
         Me.TabPage_Bills.Controls.Add(Me.dgv_billstab)
         Me.TabPage_Bills.Controls.Add(Me.panel_billstab)
-        Me.TabPage_Bills.Location = New System.Drawing.Point(4, 59)
+        Me.TabPage_Bills.Location = New System.Drawing.Point(4, 74)
         Me.TabPage_Bills.Name = "TabPage_Bills"
-        Me.TabPage_Bills.Size = New System.Drawing.Size(1785, 875)
+        Me.TabPage_Bills.Size = New System.Drawing.Size(1785, 860)
         Me.TabPage_Bills.TabIndex = 4
         Me.TabPage_Bills.Text = "Billing"
         Me.TabPage_Bills.UseVisualStyleBackColor = True
@@ -1043,18 +1047,18 @@ Partial Class form_dashboard
         '
         Me.combox_bills_status.FormattingEnabled = True
         Me.combox_bills_status.Items.AddRange(New Object() {"PAID", "PENDING", "EXEMPTED"})
-        Me.combox_bills_status.Location = New System.Drawing.Point(184, 503)
+        Me.combox_bills_status.Location = New System.Drawing.Point(271, 503)
         Me.combox_bills_status.Name = "combox_bills_status"
-        Me.combox_bills_status.Size = New System.Drawing.Size(251, 28)
+        Me.combox_bills_status.Size = New System.Drawing.Size(251, 37)
         Me.combox_bills_status.TabIndex = 21
         '
         'combox_paymode
         '
         Me.combox_paymode.FormattingEnabled = True
         Me.combox_paymode.Items.AddRange(New Object() {"CASH", "CREDIT CARD"})
-        Me.combox_paymode.Location = New System.Drawing.Point(184, 429)
+        Me.combox_paymode.Location = New System.Drawing.Point(271, 429)
         Me.combox_paymode.Name = "combox_paymode"
-        Me.combox_paymode.Size = New System.Drawing.Size(251, 28)
+        Me.combox_paymode.Size = New System.Drawing.Size(251, 37)
         Me.combox_paymode.TabIndex = 20
         '
         'btn_totalamt
@@ -1071,30 +1075,30 @@ Partial Class form_dashboard
         Me.txtbox_totalamt.Location = New System.Drawing.Point(30, 328)
         Me.txtbox_totalamt.Name = "txtbox_totalamt"
         Me.txtbox_totalamt.ReadOnly = True
-        Me.txtbox_totalamt.Size = New System.Drawing.Size(250, 26)
+        Me.txtbox_totalamt.Size = New System.Drawing.Size(250, 37)
         Me.txtbox_totalamt.TabIndex = 18
         '
         'DateTimePicker_billstab
         '
-        Me.DateTimePicker_billstab.Location = New System.Drawing.Point(184, 184)
+        Me.DateTimePicker_billstab.Location = New System.Drawing.Point(271, 184)
         Me.DateTimePicker_billstab.Name = "DateTimePicker_billstab"
-        Me.DateTimePicker_billstab.Size = New System.Drawing.Size(251, 26)
+        Me.DateTimePicker_billstab.Size = New System.Drawing.Size(251, 37)
         Me.DateTimePicker_billstab.TabIndex = 8
         '
         'combox_bills_regno
         '
         Me.combox_bills_regno.FormattingEnabled = True
-        Me.combox_bills_regno.Location = New System.Drawing.Point(184, 113)
+        Me.combox_bills_regno.Location = New System.Drawing.Point(271, 113)
         Me.combox_bills_regno.Name = "combox_bills_regno"
-        Me.combox_bills_regno.Size = New System.Drawing.Size(251, 28)
+        Me.combox_bills_regno.Size = New System.Drawing.Size(251, 37)
         Me.combox_bills_regno.TabIndex = 7
         '
         'txtbox_billid
         '
-        Me.txtbox_billid.Location = New System.Drawing.Point(184, 44)
+        Me.txtbox_billid.Location = New System.Drawing.Point(271, 44)
         Me.txtbox_billid.Name = "txtbox_billid"
         Me.txtbox_billid.ReadOnly = True
-        Me.txtbox_billid.Size = New System.Drawing.Size(251, 26)
+        Me.txtbox_billid.Size = New System.Drawing.Size(251, 37)
         Me.txtbox_billid.TabIndex = 6
         '
         'lbl_bills_status
@@ -1102,7 +1106,7 @@ Partial Class form_dashboard
         Me.lbl_bills_status.AutoSize = True
         Me.lbl_bills_status.Location = New System.Drawing.Point(26, 503)
         Me.lbl_bills_status.Name = "lbl_bills_status"
-        Me.lbl_bills_status.Size = New System.Drawing.Size(60, 20)
+        Me.lbl_bills_status.Size = New System.Drawing.Size(107, 29)
         Me.lbl_bills_status.TabIndex = 5
         Me.lbl_bills_status.Text = "Status:"
         '
@@ -1111,7 +1115,7 @@ Partial Class form_dashboard
         Me.lbl_paymode.AutoSize = True
         Me.lbl_paymode.Location = New System.Drawing.Point(26, 429)
         Me.lbl_paymode.Name = "lbl_paymode"
-        Me.lbl_paymode.Size = New System.Drawing.Size(119, 20)
+        Me.lbl_paymode.Size = New System.Drawing.Size(212, 29)
         Me.lbl_paymode.TabIndex = 4
         Me.lbl_paymode.Text = "Payment Mode:"
         '
@@ -1120,7 +1124,7 @@ Partial Class form_dashboard
         Me.lbl_totalamt.AutoSize = True
         Me.lbl_totalamt.Location = New System.Drawing.Point(26, 258)
         Me.lbl_totalamt.Name = "lbl_totalamt"
-        Me.lbl_totalamt.Size = New System.Drawing.Size(108, 20)
+        Me.lbl_totalamt.Size = New System.Drawing.Size(197, 29)
         Me.lbl_totalamt.TabIndex = 3
         Me.lbl_totalamt.Text = "Total Amount:"
         '
@@ -1129,7 +1133,7 @@ Partial Class form_dashboard
         Me.lbl_billdate.AutoSize = True
         Me.lbl_billdate.Location = New System.Drawing.Point(26, 184)
         Me.lbl_billdate.Name = "lbl_billdate"
-        Me.lbl_billdate.Size = New System.Drawing.Size(72, 20)
+        Me.lbl_billdate.Size = New System.Drawing.Size(132, 29)
         Me.lbl_billdate.TabIndex = 2
         Me.lbl_billdate.Text = "Bill Date:"
         '
@@ -1138,7 +1142,7 @@ Partial Class form_dashboard
         Me.lbl_bills_regno.AutoSize = True
         Me.lbl_bills_regno.Location = New System.Drawing.Point(26, 113)
         Me.lbl_bills_regno.Name = "lbl_bills_regno"
-        Me.lbl_bills_regno.Size = New System.Drawing.Size(123, 20)
+        Me.lbl_bills_regno.Size = New System.Drawing.Size(224, 29)
         Me.lbl_bills_regno.TabIndex = 1
         Me.lbl_bills_regno.Text = "Registration No:"
         '
@@ -1147,18 +1151,34 @@ Partial Class form_dashboard
         Me.lbl_billid.AutoSize = True
         Me.lbl_billid.Location = New System.Drawing.Point(26, 44)
         Me.lbl_billid.Name = "lbl_billid"
-        Me.lbl_billid.Size = New System.Drawing.Size(54, 20)
+        Me.lbl_billid.Size = New System.Drawing.Size(103, 29)
         Me.lbl_billid.TabIndex = 0
         Me.lbl_billid.Text = "Bill ID:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(1651, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(170, 170)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'form_dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1898, 1024)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1833, 1174)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.tabcontrol_dashboard)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "form_dashboard"
@@ -1185,6 +1205,7 @@ Partial Class form_dashboard
         CType(Me.dgv_billstab, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panel_billstab.ResumeLayout(False)
         Me.panel_billstab.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1289,4 +1310,5 @@ Partial Class form_dashboard
     Friend WithEvents btn_bills_deleterow As Button
     Friend WithEvents btn_bills_editrow As Button
     Friend WithEvents btn_bills_viewdetails As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
