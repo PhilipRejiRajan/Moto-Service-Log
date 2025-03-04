@@ -152,17 +152,18 @@ Partial Class form_dashboard
         Me.tabcontrol_dashboard.Controls.Add(Me.TabPage_Bills)
         Me.tabcontrol_dashboard.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tabcontrol_dashboard.ItemSize = New System.Drawing.Size(250, 60)
-        Me.tabcontrol_dashboard.Location = New System.Drawing.Point(12, 188)
+        Me.tabcontrol_dashboard.Location = New System.Drawing.Point(12, 12)
         Me.tabcontrol_dashboard.Multiline = True
         Me.tabcontrol_dashboard.Name = "tabcontrol_dashboard"
         Me.tabcontrol_dashboard.SelectedIndex = 0
-        Me.tabcontrol_dashboard.Size = New System.Drawing.Size(1793, 938)
+        Me.tabcontrol_dashboard.Size = New System.Drawing.Size(1939, 1002)
         Me.tabcontrol_dashboard.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.tabcontrol_dashboard.TabIndex = 0
         '
         'TabPage_Reg
         '
-        Me.TabPage_Reg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage_Reg.BackgroundImage = CType(resources.GetObject("TabPage_Reg.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage_Reg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage_Reg.Controls.Add(Me.btn_reg_editrow)
         Me.TabPage_Reg.Controls.Add(Me.btn_reg_deleterow)
         Me.TabPage_Reg.Controls.Add(Me.btn_reg_viewdetails)
@@ -171,37 +172,40 @@ Partial Class form_dashboard
         Me.TabPage_Reg.Location = New System.Drawing.Point(4, 64)
         Me.TabPage_Reg.Name = "TabPage_Reg"
         Me.TabPage_Reg.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_Reg.Size = New System.Drawing.Size(1785, 870)
+        Me.TabPage_Reg.Size = New System.Drawing.Size(1931, 934)
         Me.TabPage_Reg.TabIndex = 0
         Me.TabPage_Reg.Text = "Registration"
         Me.TabPage_Reg.UseVisualStyleBackColor = True
         '
         'btn_reg_editrow
         '
+        Me.btn_reg_editrow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_reg_editrow.Location = New System.Drawing.Point(1152, 703)
         Me.btn_reg_editrow.Name = "btn_reg_editrow"
         Me.btn_reg_editrow.Size = New System.Drawing.Size(167, 49)
         Me.btn_reg_editrow.TabIndex = 20
         Me.btn_reg_editrow.Text = "Edit Row"
-        Me.btn_reg_editrow.UseVisualStyleBackColor = True
+        Me.btn_reg_editrow.UseVisualStyleBackColor = False
         '
         'btn_reg_deleterow
         '
+        Me.btn_reg_deleterow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_reg_deleterow.Location = New System.Drawing.Point(1426, 703)
         Me.btn_reg_deleterow.Name = "btn_reg_deleterow"
         Me.btn_reg_deleterow.Size = New System.Drawing.Size(167, 49)
         Me.btn_reg_deleterow.TabIndex = 19
         Me.btn_reg_deleterow.Text = "Delete Row"
-        Me.btn_reg_deleterow.UseVisualStyleBackColor = True
+        Me.btn_reg_deleterow.UseVisualStyleBackColor = False
         '
         'btn_reg_viewdetails
         '
+        Me.btn_reg_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_reg_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_reg_viewdetails.Name = "btn_reg_viewdetails"
         Me.btn_reg_viewdetails.Size = New System.Drawing.Size(167, 49)
         Me.btn_reg_viewdetails.TabIndex = 18
         Me.btn_reg_viewdetails.Text = "View Details"
-        Me.btn_reg_viewdetails.UseVisualStyleBackColor = True
+        Me.btn_reg_viewdetails.UseVisualStyleBackColor = False
         '
         'dgv_regtab
         '
@@ -211,6 +215,7 @@ Partial Class form_dashboard
         Me.dgv_regtab.AllowUserToResizeRows = False
         Me.dgv_regtab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_regtab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_regtab.BackgroundColor = System.Drawing.Color.MistyRose
         Me.dgv_regtab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_regtab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_regtab.Name = "dgv_regtab"
@@ -218,7 +223,7 @@ Partial Class form_dashboard
         Me.dgv_regtab.RowHeadersWidth = 62
         Me.dgv_regtab.RowTemplate.Height = 28
         Me.dgv_regtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_regtab.Size = New System.Drawing.Size(1105, 602)
+        Me.dgv_regtab.Size = New System.Drawing.Size(1230, 602)
         Me.dgv_regtab.TabIndex = 1
         '
         'panel_regtab
@@ -244,30 +249,33 @@ Partial Class form_dashboard
         Me.panel_regtab.Controls.Add(Me.lbl_regno)
         Me.panel_regtab.Location = New System.Drawing.Point(26, 22)
         Me.panel_regtab.Name = "panel_regtab"
-        Me.panel_regtab.Size = New System.Drawing.Size(565, 787)
+        Me.panel_regtab.Size = New System.Drawing.Size(565, 818)
         Me.panel_regtab.TabIndex = 0
         '
         'btn_reg_clear
         '
+        Me.btn_reg_clear.BackColor = System.Drawing.Color.MistyRose
         Me.btn_reg_clear.Location = New System.Drawing.Point(311, 680)
         Me.btn_reg_clear.Name = "btn_reg_clear"
         Me.btn_reg_clear.Size = New System.Drawing.Size(167, 49)
         Me.btn_reg_clear.TabIndex = 17
         Me.btn_reg_clear.Text = "Clear"
-        Me.btn_reg_clear.UseVisualStyleBackColor = True
+        Me.btn_reg_clear.UseVisualStyleBackColor = False
         '
         'btn_register
         '
+        Me.btn_register.BackColor = System.Drawing.Color.MistyRose
         Me.btn_register.Location = New System.Drawing.Point(75, 680)
         Me.btn_register.Name = "btn_register"
         Me.btn_register.Size = New System.Drawing.Size(167, 49)
         Me.btn_register.TabIndex = 16
         Me.btn_register.Text = "Register"
-        Me.btn_register.UseVisualStyleBackColor = True
+        Me.btn_register.UseVisualStyleBackColor = False
         '
         'txtbox_yearofmfd
         '
-        Me.txtbox_yearofmfd.Location = New System.Drawing.Point(256, 575)
+        Me.txtbox_yearofmfd.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_yearofmfd.Location = New System.Drawing.Point(279, 575)
         Me.txtbox_yearofmfd.MaxLength = 4
         Me.txtbox_yearofmfd.Name = "txtbox_yearofmfd"
         Me.txtbox_yearofmfd.Size = New System.Drawing.Size(254, 37)
@@ -275,28 +283,32 @@ Partial Class form_dashboard
         '
         'txtbox_model
         '
-        Me.txtbox_model.Location = New System.Drawing.Point(256, 520)
+        Me.txtbox_model.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_model.Location = New System.Drawing.Point(279, 520)
         Me.txtbox_model.Name = "txtbox_model"
         Me.txtbox_model.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_model.TabIndex = 14
         '
         'txtbox_make
         '
-        Me.txtbox_make.Location = New System.Drawing.Point(256, 453)
+        Me.txtbox_make.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_make.Location = New System.Drawing.Point(279, 453)
         Me.txtbox_make.Name = "txtbox_make"
         Me.txtbox_make.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_make.TabIndex = 13
         '
         'txtbox_email
         '
-        Me.txtbox_email.Location = New System.Drawing.Point(256, 389)
+        Me.txtbox_email.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_email.Location = New System.Drawing.Point(279, 389)
         Me.txtbox_email.Name = "txtbox_email"
         Me.txtbox_email.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_email.TabIndex = 12
         '
         'txtbox_address
         '
-        Me.txtbox_address.Location = New System.Drawing.Point(256, 249)
+        Me.txtbox_address.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_address.Location = New System.Drawing.Point(279, 249)
         Me.txtbox_address.Multiline = True
         Me.txtbox_address.Name = "txtbox_address"
         Me.txtbox_address.Size = New System.Drawing.Size(254, 105)
@@ -304,7 +316,8 @@ Partial Class form_dashboard
         '
         'txtbox_phoneno
         '
-        Me.txtbox_phoneno.Location = New System.Drawing.Point(256, 178)
+        Me.txtbox_phoneno.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_phoneno.Location = New System.Drawing.Point(279, 178)
         Me.txtbox_phoneno.MaxLength = 10
         Me.txtbox_phoneno.Name = "txtbox_phoneno"
         Me.txtbox_phoneno.Size = New System.Drawing.Size(254, 37)
@@ -312,15 +325,17 @@ Partial Class form_dashboard
         '
         'txtbox_custname
         '
-        Me.txtbox_custname.Location = New System.Drawing.Point(256, 110)
+        Me.txtbox_custname.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_custname.Location = New System.Drawing.Point(279, 110)
         Me.txtbox_custname.Name = "txtbox_custname"
         Me.txtbox_custname.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_custname.TabIndex = 9
         '
         'txtbox_regno
         '
+        Me.txtbox_regno.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_regno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtbox_regno.Location = New System.Drawing.Point(256, 44)
+        Me.txtbox_regno.Location = New System.Drawing.Point(279, 44)
         Me.txtbox_regno.Name = "txtbox_regno"
         Me.txtbox_regno.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_regno.TabIndex = 8
@@ -399,46 +414,50 @@ Partial Class form_dashboard
         '
         'TabPage_Serv
         '
-        Me.TabPage_Serv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage_Serv.BackgroundImage = CType(resources.GetObject("TabPage_Serv.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage_Serv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage_Serv.Controls.Add(Me.btn_serv_deleterow)
         Me.TabPage_Serv.Controls.Add(Me.btn_serv_editrow)
         Me.TabPage_Serv.Controls.Add(Me.btn_serv_viewdetails)
         Me.TabPage_Serv.Controls.Add(Me.dgv_servtab)
         Me.TabPage_Serv.Controls.Add(Me.panel_servtab)
-        Me.TabPage_Serv.Location = New System.Drawing.Point(4, 74)
+        Me.TabPage_Serv.Location = New System.Drawing.Point(4, 64)
         Me.TabPage_Serv.Name = "TabPage_Serv"
         Me.TabPage_Serv.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_Serv.Size = New System.Drawing.Size(1785, 860)
+        Me.TabPage_Serv.Size = New System.Drawing.Size(1931, 934)
         Me.TabPage_Serv.TabIndex = 1
         Me.TabPage_Serv.Text = "Services"
         Me.TabPage_Serv.UseVisualStyleBackColor = True
         '
         'btn_serv_deleterow
         '
+        Me.btn_serv_deleterow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_serv_deleterow.Location = New System.Drawing.Point(1426, 703)
         Me.btn_serv_deleterow.Name = "btn_serv_deleterow"
         Me.btn_serv_deleterow.Size = New System.Drawing.Size(167, 49)
         Me.btn_serv_deleterow.TabIndex = 9
         Me.btn_serv_deleterow.Text = "Delete Row"
-        Me.btn_serv_deleterow.UseVisualStyleBackColor = True
+        Me.btn_serv_deleterow.UseVisualStyleBackColor = False
         '
         'btn_serv_editrow
         '
+        Me.btn_serv_editrow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_serv_editrow.Location = New System.Drawing.Point(1152, 703)
         Me.btn_serv_editrow.Name = "btn_serv_editrow"
         Me.btn_serv_editrow.Size = New System.Drawing.Size(167, 49)
         Me.btn_serv_editrow.TabIndex = 8
         Me.btn_serv_editrow.Text = "Edit Row"
-        Me.btn_serv_editrow.UseVisualStyleBackColor = True
+        Me.btn_serv_editrow.UseVisualStyleBackColor = False
         '
         'btn_serv_viewdetails
         '
+        Me.btn_serv_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_serv_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_serv_viewdetails.Name = "btn_serv_viewdetails"
         Me.btn_serv_viewdetails.Size = New System.Drawing.Size(167, 49)
         Me.btn_serv_viewdetails.TabIndex = 7
         Me.btn_serv_viewdetails.Text = "View Details"
-        Me.btn_serv_viewdetails.UseVisualStyleBackColor = True
+        Me.btn_serv_viewdetails.UseVisualStyleBackColor = False
         '
         'dgv_servtab
         '
@@ -448,6 +467,7 @@ Partial Class form_dashboard
         Me.dgv_servtab.AllowUserToResizeRows = False
         Me.dgv_servtab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_servtab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_servtab.BackgroundColor = System.Drawing.Color.MistyRose
         Me.dgv_servtab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_servtab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_servtab.Name = "dgv_servtab"
@@ -455,7 +475,7 @@ Partial Class form_dashboard
         Me.dgv_servtab.RowHeadersWidth = 62
         Me.dgv_servtab.RowTemplate.Height = 28
         Me.dgv_servtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_servtab.Size = New System.Drawing.Size(1105, 602)
+        Me.dgv_servtab.Size = New System.Drawing.Size(1230, 602)
         Me.dgv_servtab.TabIndex = 1
         '
         'panel_servtab
@@ -476,24 +496,27 @@ Partial Class form_dashboard
         '
         'btn_serv_clear
         '
+        Me.btn_serv_clear.BackColor = System.Drawing.Color.MistyRose
         Me.btn_serv_clear.Location = New System.Drawing.Point(290, 285)
         Me.btn_serv_clear.Name = "btn_serv_clear"
         Me.btn_serv_clear.Size = New System.Drawing.Size(167, 49)
         Me.btn_serv_clear.TabIndex = 6
         Me.btn_serv_clear.Text = "Clear"
-        Me.btn_serv_clear.UseVisualStyleBackColor = True
+        Me.btn_serv_clear.UseVisualStyleBackColor = False
         '
         'btn_addservice
         '
+        Me.btn_addservice.BackColor = System.Drawing.Color.MistyRose
         Me.btn_addservice.Location = New System.Drawing.Point(53, 285)
         Me.btn_addservice.Name = "btn_addservice"
         Me.btn_addservice.Size = New System.Drawing.Size(167, 49)
         Me.btn_addservice.TabIndex = 5
         Me.btn_addservice.Text = "Add Service"
-        Me.btn_addservice.UseVisualStyleBackColor = True
+        Me.btn_addservice.UseVisualStyleBackColor = False
         '
         'txtbox_servcost
         '
+        Me.txtbox_servcost.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_servcost.Location = New System.Drawing.Point(235, 193)
         Me.txtbox_servcost.Name = "txtbox_servcost"
         Me.txtbox_servcost.Size = New System.Drawing.Size(243, 37)
@@ -501,6 +524,7 @@ Partial Class form_dashboard
         '
         'txtbox_servname
         '
+        Me.txtbox_servname.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_servname.Location = New System.Drawing.Point(235, 116)
         Me.txtbox_servname.Name = "txtbox_servname"
         Me.txtbox_servname.Size = New System.Drawing.Size(243, 37)
@@ -508,6 +532,7 @@ Partial Class form_dashboard
         '
         'txtbox_serviceid
         '
+        Me.txtbox_serviceid.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_serviceid.Location = New System.Drawing.Point(235, 44)
         Me.txtbox_serviceid.Name = "txtbox_serviceid"
         Me.txtbox_serviceid.ReadOnly = True
@@ -543,45 +568,49 @@ Partial Class form_dashboard
         '
         'TabPage_Mech
         '
-        Me.TabPage_Mech.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage_Mech.BackgroundImage = CType(resources.GetObject("TabPage_Mech.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage_Mech.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage_Mech.Controls.Add(Me.btn_mech_deleterow)
         Me.TabPage_Mech.Controls.Add(Me.btn_mech_editrow)
         Me.TabPage_Mech.Controls.Add(Me.btn_mech_viewdetails)
         Me.TabPage_Mech.Controls.Add(Me.dgv_mechtab)
         Me.TabPage_Mech.Controls.Add(Me.panel_mechtab)
-        Me.TabPage_Mech.Location = New System.Drawing.Point(4, 74)
+        Me.TabPage_Mech.Location = New System.Drawing.Point(4, 64)
         Me.TabPage_Mech.Name = "TabPage_Mech"
-        Me.TabPage_Mech.Size = New System.Drawing.Size(1785, 860)
+        Me.TabPage_Mech.Size = New System.Drawing.Size(1931, 934)
         Me.TabPage_Mech.TabIndex = 2
         Me.TabPage_Mech.Text = "Mechanics"
         Me.TabPage_Mech.UseVisualStyleBackColor = True
         '
         'btn_mech_deleterow
         '
+        Me.btn_mech_deleterow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_mech_deleterow.Location = New System.Drawing.Point(1426, 703)
         Me.btn_mech_deleterow.Name = "btn_mech_deleterow"
         Me.btn_mech_deleterow.Size = New System.Drawing.Size(167, 49)
         Me.btn_mech_deleterow.TabIndex = 12
         Me.btn_mech_deleterow.Text = "Delete Row"
-        Me.btn_mech_deleterow.UseVisualStyleBackColor = True
+        Me.btn_mech_deleterow.UseVisualStyleBackColor = False
         '
         'btn_mech_editrow
         '
+        Me.btn_mech_editrow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_mech_editrow.Location = New System.Drawing.Point(1152, 703)
         Me.btn_mech_editrow.Name = "btn_mech_editrow"
         Me.btn_mech_editrow.Size = New System.Drawing.Size(167, 49)
         Me.btn_mech_editrow.TabIndex = 11
         Me.btn_mech_editrow.Text = "Edit Row"
-        Me.btn_mech_editrow.UseVisualStyleBackColor = True
+        Me.btn_mech_editrow.UseVisualStyleBackColor = False
         '
         'btn_mech_viewdetails
         '
+        Me.btn_mech_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_mech_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_mech_viewdetails.Name = "btn_mech_viewdetails"
         Me.btn_mech_viewdetails.Size = New System.Drawing.Size(167, 49)
         Me.btn_mech_viewdetails.TabIndex = 10
         Me.btn_mech_viewdetails.Text = "View Details"
-        Me.btn_mech_viewdetails.UseVisualStyleBackColor = True
+        Me.btn_mech_viewdetails.UseVisualStyleBackColor = False
         '
         'dgv_mechtab
         '
@@ -589,6 +618,7 @@ Partial Class form_dashboard
         Me.dgv_mechtab.AllowUserToDeleteRows = False
         Me.dgv_mechtab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_mechtab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_mechtab.BackgroundColor = System.Drawing.Color.MistyRose
         Me.dgv_mechtab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_mechtab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_mechtab.Name = "dgv_mechtab"
@@ -596,7 +626,7 @@ Partial Class form_dashboard
         Me.dgv_mechtab.RowHeadersWidth = 62
         Me.dgv_mechtab.RowTemplate.Height = 28
         Me.dgv_mechtab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_mechtab.Size = New System.Drawing.Size(1105, 602)
+        Me.dgv_mechtab.Size = New System.Drawing.Size(1230, 602)
         Me.dgv_mechtab.TabIndex = 1
         '
         'panel_mechtab
@@ -619,24 +649,27 @@ Partial Class form_dashboard
         '
         'btn_mech_clear
         '
+        Me.btn_mech_clear.BackColor = System.Drawing.Color.MistyRose
         Me.btn_mech_clear.Location = New System.Drawing.Point(278, 461)
         Me.btn_mech_clear.Name = "btn_mech_clear"
         Me.btn_mech_clear.Size = New System.Drawing.Size(167, 49)
         Me.btn_mech_clear.TabIndex = 9
         Me.btn_mech_clear.Text = "Clear"
-        Me.btn_mech_clear.UseVisualStyleBackColor = True
+        Me.btn_mech_clear.UseVisualStyleBackColor = False
         '
         'btn_addmechanic
         '
+        Me.btn_addmechanic.BackColor = System.Drawing.Color.MistyRose
         Me.btn_addmechanic.Location = New System.Drawing.Point(61, 461)
         Me.btn_addmechanic.Name = "btn_addmechanic"
         Me.btn_addmechanic.Size = New System.Drawing.Size(167, 49)
         Me.btn_addmechanic.TabIndex = 8
         Me.btn_addmechanic.Text = "Add Mechanic"
-        Me.btn_addmechanic.UseVisualStyleBackColor = True
+        Me.btn_addmechanic.UseVisualStyleBackColor = False
         '
         'txtbox_expertise
         '
+        Me.txtbox_expertise.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_expertise.Location = New System.Drawing.Point(258, 265)
         Me.txtbox_expertise.Multiline = True
         Me.txtbox_expertise.Name = "txtbox_expertise"
@@ -645,6 +678,7 @@ Partial Class form_dashboard
         '
         'txtbox_mech_phoneno
         '
+        Me.txtbox_mech_phoneno.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_mech_phoneno.Location = New System.Drawing.Point(258, 192)
         Me.txtbox_mech_phoneno.MaxLength = 10
         Me.txtbox_mech_phoneno.Name = "txtbox_mech_phoneno"
@@ -653,6 +687,7 @@ Partial Class form_dashboard
         '
         'txtbox_mechname
         '
+        Me.txtbox_mechname.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_mechname.Location = New System.Drawing.Point(258, 114)
         Me.txtbox_mechname.Name = "txtbox_mechname"
         Me.txtbox_mechname.Size = New System.Drawing.Size(247, 37)
@@ -660,6 +695,7 @@ Partial Class form_dashboard
         '
         'txtbox_mechanicid
         '
+        Me.txtbox_mechanicid.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_mechanicid.Location = New System.Drawing.Point(258, 41)
         Me.txtbox_mechanicid.Name = "txtbox_mechanicid"
         Me.txtbox_mechanicid.ReadOnly = True
@@ -704,45 +740,49 @@ Partial Class form_dashboard
         '
         'TabPage_Assig
         '
-        Me.TabPage_Assig.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage_Assig.BackgroundImage = CType(resources.GetObject("TabPage_Assig.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage_Assig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage_Assig.Controls.Add(Me.btn_assign_deleterow)
         Me.TabPage_Assig.Controls.Add(Me.btn_assign_editrow)
         Me.TabPage_Assig.Controls.Add(Me.btn_assign_viewdetails)
         Me.TabPage_Assig.Controls.Add(Me.dgv_servassigntab)
         Me.TabPage_Assig.Controls.Add(Me.panel_assigtab)
-        Me.TabPage_Assig.Location = New System.Drawing.Point(4, 74)
+        Me.TabPage_Assig.Location = New System.Drawing.Point(4, 64)
         Me.TabPage_Assig.Name = "TabPage_Assig"
-        Me.TabPage_Assig.Size = New System.Drawing.Size(1785, 860)
+        Me.TabPage_Assig.Size = New System.Drawing.Size(1931, 934)
         Me.TabPage_Assig.TabIndex = 3
         Me.TabPage_Assig.Text = "Service Assignments"
         Me.TabPage_Assig.UseVisualStyleBackColor = True
         '
         'btn_assign_deleterow
         '
+        Me.btn_assign_deleterow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_assign_deleterow.Location = New System.Drawing.Point(1426, 703)
         Me.btn_assign_deleterow.Name = "btn_assign_deleterow"
         Me.btn_assign_deleterow.Size = New System.Drawing.Size(167, 49)
         Me.btn_assign_deleterow.TabIndex = 15
         Me.btn_assign_deleterow.Text = "Delete Row"
-        Me.btn_assign_deleterow.UseVisualStyleBackColor = True
+        Me.btn_assign_deleterow.UseVisualStyleBackColor = False
         '
         'btn_assign_editrow
         '
+        Me.btn_assign_editrow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_assign_editrow.Location = New System.Drawing.Point(1152, 703)
         Me.btn_assign_editrow.Name = "btn_assign_editrow"
         Me.btn_assign_editrow.Size = New System.Drawing.Size(167, 49)
         Me.btn_assign_editrow.TabIndex = 14
         Me.btn_assign_editrow.Text = "Edit Row"
-        Me.btn_assign_editrow.UseVisualStyleBackColor = True
+        Me.btn_assign_editrow.UseVisualStyleBackColor = False
         '
         'btn_assign_viewdetails
         '
+        Me.btn_assign_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_assign_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_assign_viewdetails.Name = "btn_assign_viewdetails"
         Me.btn_assign_viewdetails.Size = New System.Drawing.Size(167, 49)
         Me.btn_assign_viewdetails.TabIndex = 13
         Me.btn_assign_viewdetails.Text = "View Details"
-        Me.btn_assign_viewdetails.UseVisualStyleBackColor = True
+        Me.btn_assign_viewdetails.UseVisualStyleBackColor = False
         '
         'dgv_servassigntab
         '
@@ -750,6 +790,7 @@ Partial Class form_dashboard
         Me.dgv_servassigntab.AllowUserToDeleteRows = False
         Me.dgv_servassigntab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_servassigntab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_servassigntab.BackgroundColor = System.Drawing.Color.MistyRose
         Me.dgv_servassigntab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_servassigntab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_servassigntab.Name = "dgv_servassigntab"
@@ -757,7 +798,7 @@ Partial Class form_dashboard
         Me.dgv_servassigntab.RowHeadersWidth = 62
         Me.dgv_servassigntab.RowTemplate.Height = 28
         Me.dgv_servassigntab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_servassigntab.Size = New System.Drawing.Size(1105, 602)
+        Me.dgv_servassigntab.Size = New System.Drawing.Size(1230, 602)
         Me.dgv_servassigntab.TabIndex = 2
         '
         'panel_assigtab
@@ -782,20 +823,22 @@ Partial Class form_dashboard
         Me.panel_assigtab.Controls.Add(Me.lbl_servassignid)
         Me.panel_assigtab.Location = New System.Drawing.Point(26, 22)
         Me.panel_assigtab.Name = "panel_assigtab"
-        Me.panel_assigtab.Size = New System.Drawing.Size(565, 787)
+        Me.panel_assigtab.Size = New System.Drawing.Size(565, 836)
         Me.panel_assigtab.TabIndex = 0
         '
         'btn_getservcost
         '
-        Me.btn_getservcost.Location = New System.Drawing.Point(315, 603)
+        Me.btn_getservcost.BackColor = System.Drawing.Color.MistyRose
+        Me.btn_getservcost.Location = New System.Drawing.Point(315, 624)
         Me.btn_getservcost.Name = "btn_getservcost"
         Me.btn_getservcost.Size = New System.Drawing.Size(229, 49)
         Me.btn_getservcost.TabIndex = 17
         Me.btn_getservcost.Text = "Get Service Cost"
-        Me.btn_getservcost.UseVisualStyleBackColor = True
+        Me.btn_getservcost.UseVisualStyleBackColor = False
         '
         'combox_assign_status
         '
+        Me.combox_assign_status.BackColor = System.Drawing.Color.MistyRose
         Me.combox_assign_status.FormattingEnabled = True
         Me.combox_assign_status.Items.AddRange(New Object() {"ASSIGNED", "ONGOING", "PENDING", "COMPLETED"})
         Me.combox_assign_status.Location = New System.Drawing.Point(275, 473)
@@ -815,25 +858,28 @@ Partial Class form_dashboard
         '
         'btn_assign_clear
         '
-        Me.btn_assign_clear.Location = New System.Drawing.Point(304, 679)
+        Me.btn_assign_clear.BackColor = System.Drawing.Color.MistyRose
+        Me.btn_assign_clear.Location = New System.Drawing.Point(304, 700)
         Me.btn_assign_clear.Name = "btn_assign_clear"
         Me.btn_assign_clear.Size = New System.Drawing.Size(167, 49)
         Me.btn_assign_clear.TabIndex = 15
         Me.btn_assign_clear.Text = "Clear"
-        Me.btn_assign_clear.UseVisualStyleBackColor = True
+        Me.btn_assign_clear.UseVisualStyleBackColor = False
         '
         'btn_assignserv
         '
-        Me.btn_assignserv.Location = New System.Drawing.Point(81, 679)
+        Me.btn_assignserv.BackColor = System.Drawing.Color.MistyRose
+        Me.btn_assignserv.Location = New System.Drawing.Point(81, 700)
         Me.btn_assignserv.Name = "btn_assignserv"
         Me.btn_assignserv.Size = New System.Drawing.Size(167, 49)
         Me.btn_assignserv.TabIndex = 14
         Me.btn_assignserv.Text = "Assign Service"
-        Me.btn_assignserv.UseVisualStyleBackColor = True
+        Me.btn_assignserv.UseVisualStyleBackColor = False
         '
         'txtbox_assign_servcost
         '
-        Me.txtbox_assign_servcost.Location = New System.Drawing.Point(29, 603)
+        Me.txtbox_assign_servcost.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_assign_servcost.Location = New System.Drawing.Point(29, 624)
         Me.txtbox_assign_servcost.Name = "txtbox_assign_servcost"
         Me.txtbox_assign_servcost.ReadOnly = True
         Me.txtbox_assign_servcost.Size = New System.Drawing.Size(250, 37)
@@ -841,6 +887,7 @@ Partial Class form_dashboard
         '
         'combox_assign_mechid
         '
+        Me.combox_assign_mechid.BackColor = System.Drawing.Color.MistyRose
         Me.combox_assign_mechid.FormattingEnabled = True
         Me.combox_assign_mechid.Location = New System.Drawing.Point(275, 315)
         Me.combox_assign_mechid.Name = "combox_assign_mechid"
@@ -849,6 +896,7 @@ Partial Class form_dashboard
         '
         'combox_assign_servid
         '
+        Me.combox_assign_servid.BackColor = System.Drawing.Color.MistyRose
         Me.combox_assign_servid.FormattingEnabled = True
         Me.combox_assign_servid.Location = New System.Drawing.Point(275, 240)
         Me.combox_assign_servid.Name = "combox_assign_servid"
@@ -857,6 +905,7 @@ Partial Class form_dashboard
         '
         'combox_assign_regno
         '
+        Me.combox_assign_regno.BackColor = System.Drawing.Color.MistyRose
         Me.combox_assign_regno.FormattingEnabled = True
         Me.combox_assign_regno.Location = New System.Drawing.Point(275, 163)
         Me.combox_assign_regno.Name = "combox_assign_regno"
@@ -865,6 +914,7 @@ Partial Class form_dashboard
         '
         'txtbox_servassignid
         '
+        Me.txtbox_servassignid.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_servassignid.Location = New System.Drawing.Point(29, 89)
         Me.txtbox_servassignid.Name = "txtbox_servassignid"
         Me.txtbox_servassignid.ReadOnly = True
@@ -874,7 +924,7 @@ Partial Class form_dashboard
         'lbl_assign_servcost
         '
         Me.lbl_assign_servcost.AutoSize = True
-        Me.lbl_assign_servcost.Location = New System.Drawing.Point(24, 551)
+        Me.lbl_assign_servcost.Location = New System.Drawing.Point(24, 572)
         Me.lbl_assign_servcost.Name = "lbl_assign_servcost"
         Me.lbl_assign_servcost.Size = New System.Drawing.Size(186, 29)
         Me.lbl_assign_servcost.TabIndex = 6
@@ -936,45 +986,49 @@ Partial Class form_dashboard
         '
         'TabPage_Bills
         '
-        Me.TabPage_Bills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage_Bills.BackgroundImage = CType(resources.GetObject("TabPage_Bills.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage_Bills.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage_Bills.Controls.Add(Me.btn_bills_deleterow)
         Me.TabPage_Bills.Controls.Add(Me.btn_bills_editrow)
         Me.TabPage_Bills.Controls.Add(Me.btn_bills_viewdetails)
         Me.TabPage_Bills.Controls.Add(Me.dgv_billstab)
         Me.TabPage_Bills.Controls.Add(Me.panel_billstab)
-        Me.TabPage_Bills.Location = New System.Drawing.Point(4, 74)
+        Me.TabPage_Bills.Location = New System.Drawing.Point(4, 64)
         Me.TabPage_Bills.Name = "TabPage_Bills"
-        Me.TabPage_Bills.Size = New System.Drawing.Size(1785, 860)
+        Me.TabPage_Bills.Size = New System.Drawing.Size(1931, 934)
         Me.TabPage_Bills.TabIndex = 4
         Me.TabPage_Bills.Text = "Billing"
         Me.TabPage_Bills.UseVisualStyleBackColor = True
         '
         'btn_bills_deleterow
         '
+        Me.btn_bills_deleterow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_bills_deleterow.Location = New System.Drawing.Point(1426, 703)
         Me.btn_bills_deleterow.Name = "btn_bills_deleterow"
         Me.btn_bills_deleterow.Size = New System.Drawing.Size(167, 49)
         Me.btn_bills_deleterow.TabIndex = 18
         Me.btn_bills_deleterow.Text = "Delete Row"
-        Me.btn_bills_deleterow.UseVisualStyleBackColor = True
+        Me.btn_bills_deleterow.UseVisualStyleBackColor = False
         '
         'btn_bills_editrow
         '
+        Me.btn_bills_editrow.BackColor = System.Drawing.Color.MistyRose
         Me.btn_bills_editrow.Location = New System.Drawing.Point(1152, 703)
         Me.btn_bills_editrow.Name = "btn_bills_editrow"
         Me.btn_bills_editrow.Size = New System.Drawing.Size(167, 49)
         Me.btn_bills_editrow.TabIndex = 17
         Me.btn_bills_editrow.Text = "Edit Row"
-        Me.btn_bills_editrow.UseVisualStyleBackColor = True
+        Me.btn_bills_editrow.UseVisualStyleBackColor = False
         '
         'btn_bills_viewdetails
         '
+        Me.btn_bills_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_bills_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_bills_viewdetails.Name = "btn_bills_viewdetails"
         Me.btn_bills_viewdetails.Size = New System.Drawing.Size(167, 49)
         Me.btn_bills_viewdetails.TabIndex = 16
         Me.btn_bills_viewdetails.Text = "View Details"
-        Me.btn_bills_viewdetails.UseVisualStyleBackColor = True
+        Me.btn_bills_viewdetails.UseVisualStyleBackColor = False
         '
         'dgv_billstab
         '
@@ -982,6 +1036,7 @@ Partial Class form_dashboard
         Me.dgv_billstab.AllowUserToDeleteRows = False
         Me.dgv_billstab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_billstab.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_billstab.BackgroundColor = System.Drawing.Color.MistyRose
         Me.dgv_billstab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_billstab.Location = New System.Drawing.Point(636, 22)
         Me.dgv_billstab.Name = "dgv_billstab"
@@ -989,7 +1044,7 @@ Partial Class form_dashboard
         Me.dgv_billstab.RowHeadersWidth = 62
         Me.dgv_billstab.RowTemplate.Height = 28
         Me.dgv_billstab.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_billstab.Size = New System.Drawing.Size(1105, 602)
+        Me.dgv_billstab.Size = New System.Drawing.Size(1230, 602)
         Me.dgv_billstab.TabIndex = 3
         '
         'panel_billstab
@@ -1013,38 +1068,42 @@ Partial Class form_dashboard
         Me.panel_billstab.Controls.Add(Me.lbl_billid)
         Me.panel_billstab.Location = New System.Drawing.Point(26, 22)
         Me.panel_billstab.Name = "panel_billstab"
-        Me.panel_billstab.Size = New System.Drawing.Size(565, 787)
+        Me.panel_billstab.Size = New System.Drawing.Size(565, 837)
         Me.panel_billstab.TabIndex = 0
         '
         'btn_gen_invoice
         '
-        Me.btn_gen_invoice.Location = New System.Drawing.Point(156, 696)
+        Me.btn_gen_invoice.BackColor = System.Drawing.Color.MistyRose
+        Me.btn_gen_invoice.Location = New System.Drawing.Point(160, 731)
         Me.btn_gen_invoice.Name = "btn_gen_invoice"
         Me.btn_gen_invoice.Size = New System.Drawing.Size(212, 49)
         Me.btn_gen_invoice.TabIndex = 24
         Me.btn_gen_invoice.Text = "Generate Invoice"
-        Me.btn_gen_invoice.UseVisualStyleBackColor = True
+        Me.btn_gen_invoice.UseVisualStyleBackColor = False
         '
         'btn_bills_clear
         '
-        Me.btn_bills_clear.Location = New System.Drawing.Point(289, 608)
+        Me.btn_bills_clear.BackColor = System.Drawing.Color.MistyRose
+        Me.btn_bills_clear.Location = New System.Drawing.Point(293, 643)
         Me.btn_bills_clear.Name = "btn_bills_clear"
         Me.btn_bills_clear.Size = New System.Drawing.Size(167, 49)
         Me.btn_bills_clear.TabIndex = 23
         Me.btn_bills_clear.Text = "Clear"
-        Me.btn_bills_clear.UseVisualStyleBackColor = True
+        Me.btn_bills_clear.UseVisualStyleBackColor = False
         '
         'btn_addbill
         '
-        Me.btn_addbill.Location = New System.Drawing.Point(66, 608)
+        Me.btn_addbill.BackColor = System.Drawing.Color.MistyRose
+        Me.btn_addbill.Location = New System.Drawing.Point(70, 643)
         Me.btn_addbill.Name = "btn_addbill"
         Me.btn_addbill.Size = New System.Drawing.Size(167, 49)
         Me.btn_addbill.TabIndex = 22
         Me.btn_addbill.Text = "Add Bill"
-        Me.btn_addbill.UseVisualStyleBackColor = True
+        Me.btn_addbill.UseVisualStyleBackColor = False
         '
         'combox_bills_status
         '
+        Me.combox_bills_status.BackColor = System.Drawing.Color.MistyRose
         Me.combox_bills_status.FormattingEnabled = True
         Me.combox_bills_status.Items.AddRange(New Object() {"PAID", "PENDING", "EXEMPTED"})
         Me.combox_bills_status.Location = New System.Drawing.Point(271, 503)
@@ -1054,6 +1113,7 @@ Partial Class form_dashboard
         '
         'combox_paymode
         '
+        Me.combox_paymode.BackColor = System.Drawing.Color.MistyRose
         Me.combox_paymode.FormattingEnabled = True
         Me.combox_paymode.Items.AddRange(New Object() {"CASH", "CREDIT CARD"})
         Me.combox_paymode.Location = New System.Drawing.Point(271, 429)
@@ -1063,15 +1123,17 @@ Partial Class form_dashboard
         '
         'btn_totalamt
         '
+        Me.btn_totalamt.BackColor = System.Drawing.Color.MistyRose
         Me.btn_totalamt.Location = New System.Drawing.Point(317, 317)
         Me.btn_totalamt.Name = "btn_totalamt"
         Me.btn_totalamt.Size = New System.Drawing.Size(229, 49)
         Me.btn_totalamt.TabIndex = 19
         Me.btn_totalamt.Text = "Calculate"
-        Me.btn_totalamt.UseVisualStyleBackColor = True
+        Me.btn_totalamt.UseVisualStyleBackColor = False
         '
         'txtbox_totalamt
         '
+        Me.txtbox_totalamt.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_totalamt.Location = New System.Drawing.Point(30, 328)
         Me.txtbox_totalamt.Name = "txtbox_totalamt"
         Me.txtbox_totalamt.ReadOnly = True
@@ -1087,6 +1149,7 @@ Partial Class form_dashboard
         '
         'combox_bills_regno
         '
+        Me.combox_bills_regno.BackColor = System.Drawing.Color.MistyRose
         Me.combox_bills_regno.FormattingEnabled = True
         Me.combox_bills_regno.Location = New System.Drawing.Point(271, 113)
         Me.combox_bills_regno.Name = "combox_bills_regno"
@@ -1095,6 +1158,7 @@ Partial Class form_dashboard
         '
         'txtbox_billid
         '
+        Me.txtbox_billid.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_billid.Location = New System.Drawing.Point(271, 44)
         Me.txtbox_billid.Name = "txtbox_billid"
         Me.txtbox_billid.ReadOnly = True
@@ -1160,7 +1224,7 @@ Partial Class form_dashboard
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1651, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(1953, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(170, 170)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1174,7 +1238,7 @@ Partial Class form_dashboard
         Me.AutoSize = True
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1833, 1174)
+        Me.ClientSize = New System.Drawing.Size(2153, 1089)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.tabcontrol_dashboard)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -1182,7 +1246,7 @@ Partial Class form_dashboard
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "form_dashboard"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "MSL Dashboard"
         Me.tabcontrol_dashboard.ResumeLayout(False)
         Me.TabPage_Reg.ResumeLayout(False)
