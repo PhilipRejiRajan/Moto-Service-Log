@@ -202,7 +202,7 @@ Partial Class form_dashboard
         Me.btn_reg_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_reg_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_reg_viewdetails.Name = "btn_reg_viewdetails"
-        Me.btn_reg_viewdetails.Size = New System.Drawing.Size(167, 49)
+        Me.btn_reg_viewdetails.Size = New System.Drawing.Size(202, 49)
         Me.btn_reg_viewdetails.TabIndex = 18
         Me.btn_reg_viewdetails.Text = "View Details"
         Me.btn_reg_viewdetails.UseVisualStyleBackColor = False
@@ -454,7 +454,7 @@ Partial Class form_dashboard
         Me.btn_serv_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_serv_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_serv_viewdetails.Name = "btn_serv_viewdetails"
-        Me.btn_serv_viewdetails.Size = New System.Drawing.Size(167, 49)
+        Me.btn_serv_viewdetails.Size = New System.Drawing.Size(202, 49)
         Me.btn_serv_viewdetails.TabIndex = 7
         Me.btn_serv_viewdetails.Text = "View Details"
         Me.btn_serv_viewdetails.UseVisualStyleBackColor = False
@@ -509,7 +509,7 @@ Partial Class form_dashboard
         Me.btn_addservice.BackColor = System.Drawing.Color.MistyRose
         Me.btn_addservice.Location = New System.Drawing.Point(53, 285)
         Me.btn_addservice.Name = "btn_addservice"
-        Me.btn_addservice.Size = New System.Drawing.Size(167, 49)
+        Me.btn_addservice.Size = New System.Drawing.Size(202, 49)
         Me.btn_addservice.TabIndex = 5
         Me.btn_addservice.Text = "Add Service"
         Me.btn_addservice.UseVisualStyleBackColor = False
@@ -607,7 +607,7 @@ Partial Class form_dashboard
         Me.btn_mech_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_mech_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_mech_viewdetails.Name = "btn_mech_viewdetails"
-        Me.btn_mech_viewdetails.Size = New System.Drawing.Size(167, 49)
+        Me.btn_mech_viewdetails.Size = New System.Drawing.Size(202, 49)
         Me.btn_mech_viewdetails.TabIndex = 10
         Me.btn_mech_viewdetails.Text = "View Details"
         Me.btn_mech_viewdetails.UseVisualStyleBackColor = False
@@ -650,7 +650,7 @@ Partial Class form_dashboard
         'btn_mech_clear
         '
         Me.btn_mech_clear.BackColor = System.Drawing.Color.MistyRose
-        Me.btn_mech_clear.Location = New System.Drawing.Point(278, 461)
+        Me.btn_mech_clear.Location = New System.Drawing.Point(314, 461)
         Me.btn_mech_clear.Name = "btn_mech_clear"
         Me.btn_mech_clear.Size = New System.Drawing.Size(167, 49)
         Me.btn_mech_clear.TabIndex = 9
@@ -662,7 +662,7 @@ Partial Class form_dashboard
         Me.btn_addmechanic.BackColor = System.Drawing.Color.MistyRose
         Me.btn_addmechanic.Location = New System.Drawing.Point(61, 461)
         Me.btn_addmechanic.Name = "btn_addmechanic"
-        Me.btn_addmechanic.Size = New System.Drawing.Size(167, 49)
+        Me.btn_addmechanic.Size = New System.Drawing.Size(202, 49)
         Me.btn_addmechanic.TabIndex = 8
         Me.btn_addmechanic.Text = "Add Mechanic"
         Me.btn_addmechanic.UseVisualStyleBackColor = False
@@ -779,7 +779,7 @@ Partial Class form_dashboard
         Me.btn_assign_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_assign_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_assign_viewdetails.Name = "btn_assign_viewdetails"
-        Me.btn_assign_viewdetails.Size = New System.Drawing.Size(167, 49)
+        Me.btn_assign_viewdetails.Size = New System.Drawing.Size(202, 49)
         Me.btn_assign_viewdetails.TabIndex = 13
         Me.btn_assign_viewdetails.Text = "View Details"
         Me.btn_assign_viewdetails.UseVisualStyleBackColor = False
@@ -829,9 +829,9 @@ Partial Class form_dashboard
         'btn_getservcost
         '
         Me.btn_getservcost.BackColor = System.Drawing.Color.MistyRose
-        Me.btn_getservcost.Location = New System.Drawing.Point(315, 624)
+        Me.btn_getservcost.Location = New System.Drawing.Point(315, 607)
         Me.btn_getservcost.Name = "btn_getservcost"
-        Me.btn_getservcost.Size = New System.Drawing.Size(229, 49)
+        Me.btn_getservcost.Size = New System.Drawing.Size(229, 66)
         Me.btn_getservcost.TabIndex = 17
         Me.btn_getservcost.Text = "Get Service Cost"
         Me.btn_getservcost.UseVisualStyleBackColor = False
@@ -869,9 +869,9 @@ Partial Class form_dashboard
         'btn_assignserv
         '
         Me.btn_assignserv.BackColor = System.Drawing.Color.MistyRose
-        Me.btn_assignserv.Location = New System.Drawing.Point(81, 700)
+        Me.btn_assignserv.Location = New System.Drawing.Point(46, 700)
         Me.btn_assignserv.Name = "btn_assignserv"
-        Me.btn_assignserv.Size = New System.Drawing.Size(167, 49)
+        Me.btn_assignserv.Size = New System.Drawing.Size(202, 70)
         Me.btn_assignserv.TabIndex = 14
         Me.btn_assignserv.Text = "Assign Service"
         Me.btn_assignserv.UseVisualStyleBackColor = False
@@ -1025,7 +1025,7 @@ Partial Class form_dashboard
         Me.btn_bills_viewdetails.BackColor = System.Drawing.Color.MistyRose
         Me.btn_bills_viewdetails.Location = New System.Drawing.Point(876, 703)
         Me.btn_bills_viewdetails.Name = "btn_bills_viewdetails"
-        Me.btn_bills_viewdetails.Size = New System.Drawing.Size(167, 49)
+        Me.btn_bills_viewdetails.Size = New System.Drawing.Size(202, 49)
         Me.btn_bills_viewdetails.TabIndex = 16
         Me.btn_bills_viewdetails.Text = "View Details"
         Me.btn_bills_viewdetails.UseVisualStyleBackColor = False
@@ -1074,9 +1074,9 @@ Partial Class form_dashboard
         'btn_gen_invoice
         '
         Me.btn_gen_invoice.BackColor = System.Drawing.Color.MistyRose
-        Me.btn_gen_invoice.Location = New System.Drawing.Point(160, 731)
+        Me.btn_gen_invoice.Location = New System.Drawing.Point(122, 729)
         Me.btn_gen_invoice.Name = "btn_gen_invoice"
-        Me.btn_gen_invoice.Size = New System.Drawing.Size(212, 49)
+        Me.btn_gen_invoice.Size = New System.Drawing.Size(261, 49)
         Me.btn_gen_invoice.TabIndex = 24
         Me.btn_gen_invoice.Text = "Generate Invoice"
         Me.btn_gen_invoice.UseVisualStyleBackColor = False

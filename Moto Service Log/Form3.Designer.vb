@@ -67,6 +67,7 @@ Partial Class form_Invoice
         '
         'btn_print
         '
+        Me.btn_print.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_print.Location = New System.Drawing.Point(284, 1202)
         Me.btn_print.Name = "btn_print"
         Me.btn_print.Size = New System.Drawing.Size(159, 54)
@@ -76,6 +77,7 @@ Partial Class form_Invoice
         '
         'btn_cancel
         '
+        Me.btn_cancel.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cancel.Location = New System.Drawing.Point(562, 1202)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(159, 54)
@@ -110,6 +112,7 @@ Partial Class form_Invoice
         'grpbox_servdetails
         '
         Me.grpbox_servdetails.Controls.Add(Me.dgv_services)
+        Me.grpbox_servdetails.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpbox_servdetails.Location = New System.Drawing.Point(29, 714)
         Me.grpbox_servdetails.Name = "grpbox_servdetails"
         Me.grpbox_servdetails.Size = New System.Drawing.Size(985, 403)
@@ -123,6 +126,7 @@ Partial Class form_Invoice
         Me.dgv_services.AllowUserToDeleteRows = False
         Me.dgv_services.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_services.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_services.BackgroundColor = System.Drawing.Color.MistyRose
         Me.dgv_services.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_services.Location = New System.Drawing.Point(31, 46)
         Me.dgv_services.Name = "dgv_services"
@@ -145,6 +149,7 @@ Partial Class form_Invoice
         Me.grpbox_billdetails.Controls.Add(Me.dtpick_billdate)
         Me.grpbox_billdetails.Controls.Add(Me.lbl_billdate)
         Me.grpbox_billdetails.Controls.Add(Me.lbl_billid)
+        Me.grpbox_billdetails.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpbox_billdetails.Location = New System.Drawing.Point(29, 427)
         Me.grpbox_billdetails.Name = "grpbox_billdetails"
         Me.grpbox_billdetails.Size = New System.Drawing.Size(985, 281)
@@ -154,26 +159,29 @@ Partial Class form_Invoice
         '
         'combox_billid
         '
+        Me.combox_billid.BackColor = System.Drawing.Color.MistyRose
         Me.combox_billid.FormattingEnabled = True
         Me.combox_billid.Location = New System.Drawing.Point(185, 58)
         Me.combox_billid.Name = "combox_billid"
-        Me.combox_billid.Size = New System.Drawing.Size(254, 28)
+        Me.combox_billid.Size = New System.Drawing.Size(254, 37)
         Me.combox_billid.TabIndex = 17
         '
         'txtbox_paymode
         '
-        Me.txtbox_paymode.Location = New System.Drawing.Point(639, 138)
+        Me.txtbox_paymode.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_paymode.Location = New System.Drawing.Point(699, 138)
         Me.txtbox_paymode.Name = "txtbox_paymode"
         Me.txtbox_paymode.ReadOnly = True
-        Me.txtbox_paymode.Size = New System.Drawing.Size(251, 26)
+        Me.txtbox_paymode.Size = New System.Drawing.Size(252, 37)
         Me.txtbox_paymode.TabIndex = 24
         '
         'txtbox_status
         '
+        Me.txtbox_status.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_status.Location = New System.Drawing.Point(185, 221)
         Me.txtbox_status.Name = "txtbox_status"
         Me.txtbox_status.ReadOnly = True
-        Me.txtbox_status.Size = New System.Drawing.Size(251, 26)
+        Me.txtbox_status.Size = New System.Drawing.Size(251, 37)
         Me.txtbox_status.TabIndex = 23
         '
         'lbl_status
@@ -181,7 +189,7 @@ Partial Class form_Invoice
         Me.lbl_status.AutoSize = True
         Me.lbl_status.Location = New System.Drawing.Point(27, 221)
         Me.lbl_status.Name = "lbl_status"
-        Me.lbl_status.Size = New System.Drawing.Size(60, 20)
+        Me.lbl_status.Size = New System.Drawing.Size(107, 29)
         Me.lbl_status.TabIndex = 22
         Me.lbl_status.Text = "Status:"
         '
@@ -190,16 +198,17 @@ Partial Class form_Invoice
         Me.lbl_paymode.AutoSize = True
         Me.lbl_paymode.Location = New System.Drawing.Point(481, 139)
         Me.lbl_paymode.Name = "lbl_paymode"
-        Me.lbl_paymode.Size = New System.Drawing.Size(119, 20)
+        Me.lbl_paymode.Size = New System.Drawing.Size(212, 29)
         Me.lbl_paymode.TabIndex = 21
         Me.lbl_paymode.Text = "Payment Mode:"
         '
         'txtbox_totalamt
         '
-        Me.txtbox_totalamt.Location = New System.Drawing.Point(185, 139)
+        Me.txtbox_totalamt.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_totalamt.Location = New System.Drawing.Point(230, 139)
         Me.txtbox_totalamt.Name = "txtbox_totalamt"
         Me.txtbox_totalamt.ReadOnly = True
-        Me.txtbox_totalamt.Size = New System.Drawing.Size(250, 26)
+        Me.txtbox_totalamt.Size = New System.Drawing.Size(230, 37)
         Me.txtbox_totalamt.TabIndex = 20
         '
         'lbl_totalamt
@@ -207,7 +216,7 @@ Partial Class form_Invoice
         Me.lbl_totalamt.AutoSize = True
         Me.lbl_totalamt.Location = New System.Drawing.Point(27, 139)
         Me.lbl_totalamt.Name = "lbl_totalamt"
-        Me.lbl_totalamt.Size = New System.Drawing.Size(108, 20)
+        Me.lbl_totalamt.Size = New System.Drawing.Size(197, 29)
         Me.lbl_totalamt.TabIndex = 19
         Me.lbl_totalamt.Text = "Total Amount:"
         '
@@ -215,7 +224,7 @@ Partial Class form_Invoice
         '
         Me.dtpick_billdate.Location = New System.Drawing.Point(639, 58)
         Me.dtpick_billdate.Name = "dtpick_billdate"
-        Me.dtpick_billdate.Size = New System.Drawing.Size(251, 26)
+        Me.dtpick_billdate.Size = New System.Drawing.Size(312, 37)
         Me.dtpick_billdate.TabIndex = 10
         '
         'lbl_billdate
@@ -223,7 +232,7 @@ Partial Class form_Invoice
         Me.lbl_billdate.AutoSize = True
         Me.lbl_billdate.Location = New System.Drawing.Point(481, 58)
         Me.lbl_billdate.Name = "lbl_billdate"
-        Me.lbl_billdate.Size = New System.Drawing.Size(72, 20)
+        Me.lbl_billdate.Size = New System.Drawing.Size(132, 29)
         Me.lbl_billdate.TabIndex = 9
         Me.lbl_billdate.Text = "Bill Date:"
         '
@@ -232,7 +241,7 @@ Partial Class form_Invoice
         Me.lbl_billid.AutoSize = True
         Me.lbl_billid.Location = New System.Drawing.Point(27, 58)
         Me.lbl_billid.Name = "lbl_billid"
-        Me.lbl_billid.Size = New System.Drawing.Size(54, 20)
+        Me.lbl_billid.Size = New System.Drawing.Size(103, 29)
         Me.lbl_billid.TabIndex = 7
         Me.lbl_billid.Text = "Bill ID:"
         '
@@ -254,6 +263,7 @@ Partial Class form_Invoice
         Me.grpbox_regdetails.Controls.Add(Me.lbl_phoneno)
         Me.grpbox_regdetails.Controls.Add(Me.txtbox_phoneno)
         Me.grpbox_regdetails.Controls.Add(Me.lbl_make)
+        Me.grpbox_regdetails.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpbox_regdetails.Location = New System.Drawing.Point(29, 18)
         Me.grpbox_regdetails.Name = "grpbox_regdetails"
         Me.grpbox_regdetails.Size = New System.Drawing.Size(985, 403)
@@ -263,27 +273,30 @@ Partial Class form_Invoice
         '
         'combox_regno
         '
+        Me.combox_regno.BackColor = System.Drawing.Color.MistyRose
         Me.combox_regno.FormattingEnabled = True
-        Me.combox_regno.Location = New System.Drawing.Point(185, 55)
+        Me.combox_regno.Location = New System.Drawing.Point(274, 55)
         Me.combox_regno.Name = "combox_regno"
-        Me.combox_regno.Size = New System.Drawing.Size(254, 28)
+        Me.combox_regno.Size = New System.Drawing.Size(182, 37)
         Me.combox_regno.TabIndex = 16
         '
         'txtbox_email
         '
+        Me.txtbox_email.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_email.Location = New System.Drawing.Point(659, 338)
         Me.txtbox_email.Name = "txtbox_email"
         Me.txtbox_email.ReadOnly = True
-        Me.txtbox_email.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_email.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_email.TabIndex = 12
         '
         'txtbox_yearofmfd
         '
-        Me.txtbox_yearofmfd.Location = New System.Drawing.Point(185, 269)
+        Me.txtbox_yearofmfd.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_yearofmfd.Location = New System.Drawing.Point(208, 269)
         Me.txtbox_yearofmfd.MaxLength = 4
         Me.txtbox_yearofmfd.Name = "txtbox_yearofmfd"
         Me.txtbox_yearofmfd.ReadOnly = True
-        Me.txtbox_yearofmfd.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_yearofmfd.Size = New System.Drawing.Size(231, 37)
         Me.txtbox_yearofmfd.TabIndex = 15
         '
         'lbl_email
@@ -291,25 +304,26 @@ Partial Class form_Invoice
         Me.lbl_email.AutoSize = True
         Me.lbl_email.Location = New System.Drawing.Point(481, 338)
         Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(52, 20)
+        Me.lbl_email.Size = New System.Drawing.Size(94, 29)
         Me.lbl_email.TabIndex = 4
         Me.lbl_email.Text = "Email:"
         '
         'lbl_regno
         '
         Me.lbl_regno.AutoSize = True
-        Me.lbl_regno.Location = New System.Drawing.Point(27, 55)
+        Me.lbl_regno.Location = New System.Drawing.Point(16, 55)
         Me.lbl_regno.Name = "lbl_regno"
-        Me.lbl_regno.Size = New System.Drawing.Size(123, 20)
+        Me.lbl_regno.Size = New System.Drawing.Size(224, 29)
         Me.lbl_regno.TabIndex = 0
         Me.lbl_regno.Text = "Registration No:"
         '
         'txtbox_model
         '
+        Me.txtbox_model.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_model.Location = New System.Drawing.Point(185, 199)
         Me.txtbox_model.Name = "txtbox_model"
         Me.txtbox_model.ReadOnly = True
-        Me.txtbox_model.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_model.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_model.TabIndex = 14
         '
         'lbl_yearofmfd
@@ -317,12 +331,13 @@ Partial Class form_Invoice
         Me.lbl_yearofmfd.AutoSize = True
         Me.lbl_yearofmfd.Location = New System.Drawing.Point(27, 269)
         Me.lbl_yearofmfd.Name = "lbl_yearofmfd"
-        Me.lbl_yearofmfd.Size = New System.Drawing.Size(99, 20)
+        Me.lbl_yearofmfd.Size = New System.Drawing.Size(175, 29)
         Me.lbl_yearofmfd.TabIndex = 7
         Me.lbl_yearofmfd.Text = "Year Of Mfd:"
         '
         'txtbox_address
         '
+        Me.txtbox_address.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_address.Location = New System.Drawing.Point(659, 199)
         Me.txtbox_address.Multiline = True
         Me.txtbox_address.Name = "txtbox_address"
@@ -332,18 +347,19 @@ Partial Class form_Invoice
         '
         'txtbox_make
         '
+        Me.txtbox_make.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_make.Location = New System.Drawing.Point(185, 126)
         Me.txtbox_make.Name = "txtbox_make"
         Me.txtbox_make.ReadOnly = True
-        Me.txtbox_make.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_make.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_make.TabIndex = 13
         '
         'lbl_custname
         '
         Me.lbl_custname.AutoSize = True
-        Me.lbl_custname.Location = New System.Drawing.Point(481, 55)
+        Me.lbl_custname.Location = New System.Drawing.Point(462, 55)
         Me.lbl_custname.Name = "lbl_custname"
-        Me.lbl_custname.Size = New System.Drawing.Size(128, 20)
+        Me.lbl_custname.Size = New System.Drawing.Size(231, 29)
         Me.lbl_custname.TabIndex = 1
         Me.lbl_custname.Text = "Customer Name:"
         '
@@ -352,16 +368,17 @@ Partial Class form_Invoice
         Me.lbl_address.AutoSize = True
         Me.lbl_address.Location = New System.Drawing.Point(481, 199)
         Me.lbl_address.Name = "lbl_address"
-        Me.lbl_address.Size = New System.Drawing.Size(72, 20)
+        Me.lbl_address.Size = New System.Drawing.Size(128, 29)
         Me.lbl_address.TabIndex = 3
         Me.lbl_address.Text = "Address:"
         '
         'txtbox_custname
         '
-        Me.txtbox_custname.Location = New System.Drawing.Point(659, 55)
+        Me.txtbox_custname.BackColor = System.Drawing.Color.MistyRose
+        Me.txtbox_custname.Location = New System.Drawing.Point(718, 55)
         Me.txtbox_custname.Name = "txtbox_custname"
         Me.txtbox_custname.ReadOnly = True
-        Me.txtbox_custname.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_custname.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_custname.TabIndex = 9
         '
         'lbl_model
@@ -369,7 +386,7 @@ Partial Class form_Invoice
         Me.lbl_model.AutoSize = True
         Me.lbl_model.Location = New System.Drawing.Point(27, 199)
         Me.lbl_model.Name = "lbl_model"
-        Me.lbl_model.Size = New System.Drawing.Size(56, 20)
+        Me.lbl_model.Size = New System.Drawing.Size(100, 29)
         Me.lbl_model.TabIndex = 6
         Me.lbl_model.Text = "Model:"
         '
@@ -378,17 +395,18 @@ Partial Class form_Invoice
         Me.lbl_phoneno.AutoSize = True
         Me.lbl_phoneno.Location = New System.Drawing.Point(481, 126)
         Me.lbl_phoneno.Name = "lbl_phoneno"
-        Me.lbl_phoneno.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_phoneno.Size = New System.Drawing.Size(147, 29)
         Me.lbl_phoneno.TabIndex = 2
         Me.lbl_phoneno.Text = "Phone No:"
         '
         'txtbox_phoneno
         '
+        Me.txtbox_phoneno.BackColor = System.Drawing.Color.MistyRose
         Me.txtbox_phoneno.Location = New System.Drawing.Point(659, 126)
         Me.txtbox_phoneno.MaxLength = 10
         Me.txtbox_phoneno.Name = "txtbox_phoneno"
         Me.txtbox_phoneno.ReadOnly = True
-        Me.txtbox_phoneno.Size = New System.Drawing.Size(254, 26)
+        Me.txtbox_phoneno.Size = New System.Drawing.Size(254, 37)
         Me.txtbox_phoneno.TabIndex = 10
         '
         'lbl_make
@@ -396,7 +414,7 @@ Partial Class form_Invoice
         Me.lbl_make.AutoSize = True
         Me.lbl_make.Location = New System.Drawing.Point(27, 126)
         Me.lbl_make.Name = "lbl_make"
-        Me.lbl_make.Size = New System.Drawing.Size(52, 20)
+        Me.lbl_make.Size = New System.Drawing.Size(91, 29)
         Me.lbl_make.TabIndex = 5
         Me.lbl_make.Text = "Make:"
         '
@@ -405,7 +423,9 @@ Partial Class form_Invoice
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1082, 1292)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1083, 1294)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btn_cancel)
         Me.Controls.Add(Me.btn_print)
