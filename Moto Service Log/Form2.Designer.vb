@@ -830,9 +830,9 @@ Partial Class form_dashboard
         'btn_getservcost
         '
         Me.btn_getservcost.BackColor = System.Drawing.Color.MistyRose
-        Me.btn_getservcost.Location = New System.Drawing.Point(315, 607)
+        Me.btn_getservcost.Location = New System.Drawing.Point(315, 597)
         Me.btn_getservcost.Name = "btn_getservcost"
-        Me.btn_getservcost.Size = New System.Drawing.Size(229, 66)
+        Me.btn_getservcost.Size = New System.Drawing.Size(229, 76)
         Me.btn_getservcost.TabIndex = 17
         Me.btn_getservcost.Text = "Get Service Cost"
         Me.btn_getservcost.UseVisualStyleBackColor = False
