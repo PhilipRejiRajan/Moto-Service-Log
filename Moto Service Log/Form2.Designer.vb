@@ -145,6 +145,7 @@ Partial Class form_dashboard
         '
         'tabcontrol_dashboard
         '
+        Me.tabcontrol_dashboard.Appearance = System.Windows.Forms.TabAppearance.Buttons
         Me.tabcontrol_dashboard.Controls.Add(Me.TabPage_Reg)
         Me.tabcontrol_dashboard.Controls.Add(Me.TabPage_Serv)
         Me.tabcontrol_dashboard.Controls.Add(Me.TabPage_Mech)
@@ -871,7 +872,7 @@ Partial Class form_dashboard
         Me.btn_assignserv.BackColor = System.Drawing.Color.MistyRose
         Me.btn_assignserv.Location = New System.Drawing.Point(46, 700)
         Me.btn_assignserv.Name = "btn_assignserv"
-        Me.btn_assignserv.Size = New System.Drawing.Size(202, 70)
+        Me.btn_assignserv.Size = New System.Drawing.Size(202, 82)
         Me.btn_assignserv.TabIndex = 14
         Me.btn_assignserv.Text = "Assign Service"
         Me.btn_assignserv.UseVisualStyleBackColor = False
