@@ -27,31 +27,31 @@ It is designed to reduce manual record keeping and tracking of customer registra
 ### Registration Tab
 
 <p align="center">
-  <img src="MSL Screenshots/MSL New 02.png"/>
+  <img src="MSL Screenshots/MSL SS01.png"/>
 </p>
 
 ### Services Tab
 
 <p align="center">
-  <img src="MSL Screenshots/MSL New 03.png"/>
+  <img src="MSL Screenshots/MSL SS02.png"/>
 </p>
 
 ### Mechanics Tab
 
 <p align="center">
-  <img src="MSL Screenshots/MSL New 04.png"/>
+  <img src="MSL Screenshots/MSL SS03.png"/>
 </p>
 
 ### Service Assignments Tab
 
 <p align="center">
-  <img src="MSL Screenshots/MSL New 05.png"/>
+  <img src="MSL Screenshots/MSL SS04.png"/>
 </p>
 
 ### Billing Tab
 
 <p align="center">
-  <img src="MSL Screenshots/MSL New 06.png"/>
+  <img src="MSL Screenshots/MSL SS05.png"/>
 </p>
 
 ## Invoice window
