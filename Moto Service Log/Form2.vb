@@ -18,6 +18,12 @@ Public Class form_dashboard
         'Load Registration Number ComboBox in Billing Tab
         LoadBillingRegNoComboBox()
 
+        'Set Service Assignment Tab DateTimePicker MinDate to Today
+        DateTimePicker_assigtab.MinDate = Date.Today
+
+        'Set Billing DateTimePicker Tab MinDate to Today
+        DateTimePicker_billstab.MinDate = Date.Today
+
     End Sub
 
     'Close Application
