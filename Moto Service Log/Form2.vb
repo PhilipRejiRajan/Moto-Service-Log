@@ -23,6 +23,7 @@ Public Class form_dashboard
 
         'Set Billing DateTimePicker Tab MinDate to Today
         DateTimePicker_billstab.MinDate = Date.Today
+        DateTimePicker_billstab.MaxDate = Date.Today
 
     End Sub
 
